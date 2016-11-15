@@ -23,20 +23,20 @@
 
   <div class="bgimg">
 
-    <div class="inline">
+    <div class="usefullLink">
       <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" class="inline">About Us</a><br>
+      <a href="${About}" id="linkAbout">About Us</a>
       <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" class="inline">Sign In</a><br>
+      <a href="${About}" id="linkSignIn">Sign In</a>
       <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" class="inline">Sing Up</a><br>
+      <a href="${About}" id="linkSignUp">Sing Up</a>
     </div>
 
-    <div class="w3-display-middle">
-      <h1 style="font-size: 92px; color: white;">LEARNING EASILY</h1>
+    <div class="w3-center">
+      <h1 class="h1">LEARNING EASILY</h1>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
       <p class="w3-center" style="font-size: 36px; color: white;">Learn like it's a game! A very easy way to learn things</p>
-        <button id="button_login" type="button">
+        <button id="button_login" type="button" >
             <spring:url value="/login" var="Login"/>
             <a href="${Login}" style="text-decoration: none; color: white; font-size: 40px">Login</a><br>
         </button>

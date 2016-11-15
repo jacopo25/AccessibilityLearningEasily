@@ -1,4 +1,8 @@
-body,h1 {font-family: "Raleway", sans-serif;  font-size: 3em}
+body,h1 {
+    font-family: "Raleway", sans-serif;
+    color:white;
+}
+
 body, html {height: 100%}
 .bgimg {
     min-height: 100%;
@@ -7,9 +11,13 @@ body, html {height: 100%}
     background-size: cover;
 }
 
+.h1{
+    font-size: 100px;
+}
+
 #button_login {
     position:absolute;
-    top: 100%;
+    top: 80%;
     left: 20%;
     background-color: transparent;
     border: #eeeeee;
@@ -17,14 +25,33 @@ body, html {height: 100%}
 
 #button_register {
     position:absolute;
-    top: 100%;
+    top: 80%;
     left: 75%;
     background-color: transparent;
     border: #eeeeee;
 
 }
 
-.inline {
-    display:inline;
-    margin-right:5px;
+.usefullLink{
+    text-align:center;
+}
+
+#linkAbout
+{
+    font-weight:bold;
+    float:left;
+    color: white;
+}
+#linkSignIn
+{
+    font-weight:bold;
+    vertical-align:middle;
+    color: white;
+
+}
+#linkSignUp
+{
+    font-weight:bold;
+    float:right;
+    color: white;
 }
