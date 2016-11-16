@@ -27,9 +27,9 @@
       <spring:url value="/aboutUs" var="About"/>
       <a href="${About}" id="linkAbout">About Us</a>
       <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" id="linkSignIn">Sign In</a>
+      <a href="${About}" id="linkLog">Login</a>
       <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" id="linkSignUp">Sing Up</a>
+      <a href="${About}" id="linkReg">Register</a>
     </div>
 
     <div class="w3-center">

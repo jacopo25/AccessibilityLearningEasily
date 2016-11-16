@@ -15,6 +15,49 @@ body, html {height: 100%}
     font-size: 100px;
 }
 
+.LogIn{
+    padding-top: 100px;
+}
+
+.form input[type=text]
+{
+    color: white;
+}
+.form input[type=password]
+{
+    color: white;
+}
+
+
+#username{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed ;
+    margin-bottom: 20px;
+    width: 275px;
+    outline: none;
+    padding: 0 0 0 0;
+    font-style: italic;
+}
+
+#password{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed ;
+    margin-bottom: 20px;
+    width: 275px;
+    outline: none;
+    padding: 0 0 0 0;
+    font-style: italic;
+}
+
+#submitLogIn{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
 #button_login {
     position:absolute;
     top: 80%;
@@ -33,23 +76,23 @@ body, html {height: 100%}
 }
 
 .usefullLink{
-    text-align:center;
+    text-align:right;
 }
 
 #linkAbout
 {
     font-weight:bold;
-    float:left;
+    padding-right: 15px;
     color: white;
 }
-#linkSignIn
+#linkLog
 {
     font-weight:bold;
-    vertical-align:middle;
+    padding-right: 15px;
     color: white;
 
 }
-#linkSignUp
+#linkReg
 {
     font-weight:bold;
     float:right;
