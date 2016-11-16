@@ -12,14 +12,15 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/css/generalStyle.css"
           type="text/css">
-    <title>Class Page</title>
+    <title>Profile Page</title>
 </head>
 
 <body>
 
 <header>
     <div class="innertube">
-        <h1>Header...</h1>
+        <h1>Learning Easily</h1>
+
     </div>
 </header>
 
@@ -28,37 +29,37 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <h1>Heading</h1>
-                <p><script>generateText(20)</script></p>
+                <h1>Hi xxx! This is your profile</h1>
+                <h2>Your profile data</h2>
+                    <p>Qui inseriamo i dati</p>
+                <h2>Your lectures</h2>
+                    <p>Qui inseriamo le lezioni svolte</p>
             </div>
         </div>
     </main>
 
     <nav>
         <div class="innertube">
-            <h3>Right heading</h3>
+            <h3>My Profile</h3>
+
+            <h3>History Course</h3>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
+                <li><a href="#">The French Revolution</a></li>
+                <li><a href="#">The First World War</a></li>
+                <li><a href="#">The Second World War</a></li>
             </ul>
-            <h3>Right heading</h3>
+
+            <h3>Math Course</h3>
             <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-            </ul>
-            <h3>Right heading</h3>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
+                <li><a href="#">The Equations</a></li>
+                <li><a href="#">The Disequations</a></li>
+                <li><a href="#">The Quadratic Equations</a></li>
+                <li><a href="#">The Equations</a></li>
+                <li><a href="#">The Disequations</a></li>
+                <li><a href="#">The Quadratic Equations</a></li>
+                <li><a href="#">The Equations</a></li>
+                <li><a href="#">The Disequations</a></li>
+                <li><a href="#">The Quadratic Equations</a></li>
             </ul>
         </div>
     </nav>
@@ -67,7 +68,7 @@
 
 <footer>
     <div class="innertube">
-        <p>Footer...</p>
+        <p>Learning Easily - Project for: Accessibility. AA 2015/2016 - Authors: Magni Jacopo and Rezzonico Davide</p>
     </div>
 </footer>
 
