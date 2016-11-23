@@ -15,7 +15,7 @@ public class AccountLecture {
     @Id
     private int account_id;
     @Id
-    private int letcure_id;
+    private int lecture_id;
 
 // ---------- GETTERS AND SETTERS ----------//
 
@@ -28,11 +28,11 @@ public class AccountLecture {
     }
 
     public int getLetcure_id() {
-        return letcure_id;
+        return lecture_id;
     }
 
     public void setLetcure_id(int letcure_id) {
-        this.letcure_id = letcure_id;
+        this.lecture_id = letcure_id;
     }
 
 

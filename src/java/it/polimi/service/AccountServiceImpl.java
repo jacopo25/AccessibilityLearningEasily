@@ -2,6 +2,7 @@ package it.polimi.service;
 
 import it.polimi.model.Account;
 import it.polimi.model.Badges;
+import it.polimi.model.Lecture;
 import it.polimi.repository.AccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -68,6 +69,13 @@ public class AccountServiceImpl implements AccountService {
         List<Badges> badgesList = repo.retrieveAccountBadges(account);
 
         return badgesList;
+    }
+
+    @Override
+    public List<Lecture> retrieveAccountLecture(Account account){
+
+        List<Lecture> accountLecture = repo.retrieveAccountLecture(account);
+        return accountLecture;
     }
 
     @Override

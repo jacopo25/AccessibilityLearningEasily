@@ -19,7 +19,7 @@
 
 <header>
     <div class="innertube">
-        <h1>Header...</h1>
+        <h1>History Course</h1>
     </div>
 </header>
 

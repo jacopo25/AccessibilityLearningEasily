@@ -31,7 +31,11 @@
             <div class="innertube">
                 <h1>Hi xxx! This is your profile</h1>
                 <h2>Your profile data</h2>
-                    <p>Qui inseriamo i dati</p>
+                <p><b>Name: </b> nome </p>
+                <p><b>Surname: </b> cognome </p>
+                <p><b>Nickname: </b> nickanme </p>
+                <p><b>Age: </b> age </p>
+                <p><b>email: </b> email </p>
                 <h2>Your lectures</h2>
                     <p>Qui inseriamo le lezioni svolte</p>
             </div>

@@ -16,7 +16,7 @@ public class Lecture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int lecture_ID;
+    private int lecture_id;
 
     private int course_ID;
     private String lecture_name;
@@ -29,11 +29,11 @@ public class Lecture {
 // ---------- GETTERS AND SETTERS ----------//
 
     public int getLecture_ID() {
-        return lecture_ID;
+        return lecture_id;
     }
 
     public void setLecture_ID(int lecture_ID) {
-        this.lecture_ID = lecture_ID;
+        this.lecture_id = lecture_ID;
     }
 
     public int getCourse_ID() {

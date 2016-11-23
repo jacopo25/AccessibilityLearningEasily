@@ -1,9 +1,6 @@
 package it.polimi.repository;
 
-import it.polimi.model.Account;
-import it.polimi.model.AccountBadges;
-import it.polimi.model.AccountLecture;
-import it.polimi.model.Badges;
+import it.polimi.model.*;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -64,6 +61,22 @@ public class AccountRepoImpl implements AccountRepo{
         query.setParameter("account_id", account_id);
 
         List<Badges> rl = query.getResultList();
+
+        return rl;
+
+    }
+
+    @Override
+    public List<Lecture> retrieveAccountLecture(Account account){
+
+        int account_id = account.getOid();
+
+        TypedQuery<Lecture> query = em.createQuery("SELECT l FROM Lecture l, Account a, AccountLecture al " +
+                        "WHERE a.account_id = :account_id AND l.lecture_id = al.lecture_id AND a.account_id = al.account_id",
+                Lecture.class);
+        query.setParameter("account_id", account_id);
+
+        List<Lecture> rl = query.getResultList();
 
         return rl;
 
