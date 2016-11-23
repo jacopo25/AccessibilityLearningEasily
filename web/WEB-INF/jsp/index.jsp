@@ -26,10 +26,10 @@
     <div class="usefullLink">
       <spring:url value="/aboutUs" var="About"/>
       <a href="${About}" id="linkAbout">About Us</a>
-      <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" id="linkLog">Login</a>
-      <spring:url value="/aboutUs" var="About"/>
-      <a href="${About}" id="linkReg">Register</a>
+      <spring:url value="/login" var="Login"/>
+      <a href="${Login}" id="linkLog">Login</a>
+      <spring:url value="/registration" var="Registration"/>
+      <a href="${Registration}" id="linkReg">Register</a>
     </div>
 
     <div class="w3-center">
@@ -41,8 +41,8 @@
             <a href="${Login}" style="text-decoration: none; color: white; font-size: 40px">Login</a><br>
         </button>
         <button id="button_register" type="button">
-            <spring:url value="/login" var="Login"/>
-            <a href="${Login}" style="text-decoration: none; color: white; font-size: 40px">Register</a><br>
+            <spring:url value="/registration" var="Registration"/>
+            <a href="${Registration}" style="text-decoration: none; color: white; font-size: 40px">Register</a><br>
         </button>
     </div>
 

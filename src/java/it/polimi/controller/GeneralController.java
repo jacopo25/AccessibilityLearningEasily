@@ -27,6 +27,12 @@ public class GeneralController {
         return "/login";
     }
 
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String formRegistration(Model model) {
+        model.addAttribute(new Account());
+        return "/registration";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginForm(@ModelAttribute("Account")Account account, RedirectAttributes redirect){
         if(!service.validatePassword(account)){

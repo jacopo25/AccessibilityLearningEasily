@@ -50,5 +50,8 @@
     <orderEntry type="library" name="org.apache.commons:commons-dbcp2:2.1.1" level="project" />
     <orderEntry type="library" name="org.hibernate:hibernate-entitymanager:5.1.0.Final" level="project" />
     <orderEntry type="library" name="mysql:mysql-connector-java:5.1.38" level="project" />
+    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
+    <orderEntry type="library" name="jQuery UI-1.10.2" level="application" />
+    <orderEntry type="library" name="jquery.validation-DefinitelyTyped" level="application" />
   </component>
 </module>
