@@ -22,7 +22,7 @@
 
 <div class="bgimg">
 
-    <form class="form" method="post">
+    <form class="form" method="post" autocomplete="off">
 
         <div class="w3-center">
             <div class="LogIn">Log In</div>
@@ -41,7 +41,7 @@
                        name="${status.expression}" value="${status.value}"></br>
             </spring:bind>
 
-            <button type="submit" id="submitLogIn">Log In</button>
+            <button type="submit" id="submitLogIn">Sign In</button>
 
         </div>
         </div>
