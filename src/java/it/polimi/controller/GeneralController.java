@@ -27,12 +27,6 @@ public class GeneralController {
         return "/login";
     }
 
-    @RequestMapping(value = "/registration", method = RequestMethod.GET)
-    public String formRegistration(Model model) {
-        model.addAttribute(new Account());
-        return "/registration";
-    }
-
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginForm(@ModelAttribute("Account")Account account, RedirectAttributes redirect){
         if(!service.validatePassword(account)){
@@ -44,9 +38,26 @@ public class GeneralController {
         }
     }
 
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String formRegistration(Model model) {
+        model.addAttribute(new Account());
+        return "/registration";
+    }
+
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String formRegistration(@ModelAttribute("Account")Account account, RedirectAttributes redirect) {
+
+        service.createAccount(account);
+        redirect.addFlashAttribute("Account", account);
+
+        return "redirect:/profilePage";
+    }
+
     @RequestMapping(value = "/profilePage", method = RequestMethod.GET)
-    public String formLogin(Model model,@ModelAttribute("account")Account account) {
-        System.out.println(account.getNickname());
+    public String formLogin(@ModelAttribute("account")Account account,Model model) {
+
+        Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
+        model.addAttribute(accountRetrived);
         return "profilePage";
     }
 }

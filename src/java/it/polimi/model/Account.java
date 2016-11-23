@@ -20,7 +20,7 @@ public class Account implements Serializable {
     private String surname;
     private String nickname;
     private String password;
-    private String mail;
+    private String email;
     private String age;
 
 // ---------- GETTERS AND SETTERS ----------//
@@ -66,11 +66,11 @@ public class Account implements Serializable {
     }
 
     public String getMail() {
-        return mail;
+        return email;
     }
 
     public void setMail(String mail) {
-        this.mail = mail;
+        this.email = mail;
     }
 
     public String getAge() {

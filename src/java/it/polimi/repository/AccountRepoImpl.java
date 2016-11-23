@@ -2,6 +2,7 @@ package it.polimi.repository;
 
 import it.polimi.model.*;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -12,6 +13,7 @@ import java.util.List;
  * Created by Jacopo Magni on 24/10/2016.
  */
 @Repository
+@Transactional("transactionManager")
 public class AccountRepoImpl implements AccountRepo{
 
     /**
@@ -83,12 +85,10 @@ public class AccountRepoImpl implements AccountRepo{
     }
 
     @Override
+    @Transactional
     public void createAccount(Account account){
 
-        em.getTransaction().begin();
         em.persist(account);
-        em.getTransaction().commit();
-        em.close();
 
     }
 

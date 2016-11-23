@@ -15,7 +15,6 @@
           href="${pageContext.request.contextPath}/resources/css/homeStyle.css"
           type="text/css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <title>Registration</title>
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -44,21 +43,6 @@
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
-                <spring:bind path="account.nickname">
-                    <input type="text" placeholder="nickname" id="nickname"
-                           name="${status.expression}" value="${status.value}"><br>
-                </spring:bind>
-
-                <spring:bind path="account.password">
-                    <input type="password" placeholder="password" id="password"
-                           name="${status.expression}" value="${status.value}"><br>
-                </spring:bind>
-
-                    <input type="password" placeholder="confirm password" id="confirm_password">
-                <span id='message'></span>
-                <br>
-
-
                 <spring:bind path="account.mail">
                     <input type="text" placeholder="mail" id="mail"
                            name="${status.expression}" value="${status.value}"><br>
@@ -69,7 +53,22 @@
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
-                <button type="submit" id="submit">Register</button>
+                <spring:bind path="account.nickname">
+                    <input type="text" placeholder="nickname" id="nickname"
+                           name="${status.expression}" value="${status.value}"><br>
+                </spring:bind>
+
+                <spring:bind path="account.password">
+                    <input type="password" placeholder="password" id="password"
+                           name="${status.expression}" value="${status.value}"><br>
+                </spring:bind>
+
+                <input type="password" placeholder="confirm password" id="confirm_password">
+                <div id='message'></div>
+
+                <br>
+
+                <button type="submit" id="submit" disabled="true">Register</button>
 
             </div>
         </div>
@@ -78,13 +77,14 @@
 
 </div>
 
-<script>
+<script type="text/javascript">
 
     $("#password, #confirm_password").on("keyup", function () {
         if ($("#password").val() == $("#confirm_password").val()) {
-            $("#message").html("Passwords Matching").css("color", "green");
+            $("#message").html("PASSWORD MATCHING").css("color", "CHARTREUSE");
+            document.getElementById("submit").disabled = false;
         } else
-            $("#message").html("Passwords not matching").css("color", "red");
+            $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW");
     });
 </script>
 

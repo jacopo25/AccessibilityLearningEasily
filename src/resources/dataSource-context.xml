@@ -26,15 +26,15 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/accessibility_schema" />
+        <property name="url" value="jdbc:mysql://localhost:3306/accessibility" />
         <property name="username" value="root" />
-        <property name="password" value="asd123ASD123##" />
+        <property name="password" value="kazziuraniss" />
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="emf" />
     </bean>
 
-    <tx:annotation-driven />
+    <tx:annotation-driven transaction-manager="transactionManager"/>
 
 </beans>

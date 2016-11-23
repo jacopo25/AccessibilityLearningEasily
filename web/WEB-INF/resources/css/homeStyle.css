@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'MyWebFont';
+    url('FFF_Tusj.ttf')  format('truetype');
+}
 body,h1 {
     font-family: "Raleway", sans-serif;
     color:white;
@@ -103,3 +107,4 @@ body, html {height: 100%}
     float:right;
     color: white;
 }
+
