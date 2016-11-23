@@ -32,16 +32,16 @@
         <div class="inputs">
 
             <spring:bind path="account.nickname">
-                <input type="text" placeholder="nickname" id="username"
-                       name="${status.expression}" value="${status.value}"></br>
+                <input type="text" placeholder="nickname" id="nickname"
+                       name="${status.expression}" value="${status.value}"><br>
             </spring:bind>
 
             <spring:bind path="account.password">
                 <input type="password" placeholder="password" id="password"
-                       name="${status.expression}" value="${status.value}"></br>
+                       name="${status.expression}" value="${status.value}"><br>
             </spring:bind>
 
-            <button type="submit" id="submitLogIn">Sign In</button>
+            <button type="submit" id="submit">Sign In</button>
 
         </div>
         </div>
