@@ -1,6 +1,9 @@
 package it.polimi.repository;
 
 import it.polimi.model.Account;
+import it.polimi.model.AccountBadges;
+import it.polimi.model.AccountLecture;
+import it.polimi.model.Badges;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -21,7 +24,7 @@ public class AccountRepoImpl implements AccountRepo{
     protected EntityManager em;
 
     @Override
-    public String retrievePassword(String nickname){
+    public Account retrieveAccountFromNickname(String nickname){
 
         TypedQuery<Account> query = em.createQuery("SELECT a FROM Account a " +
                 "WHERE a.nickname = :nickname", Account.class);
@@ -29,20 +32,78 @@ public class AccountRepoImpl implements AccountRepo{
 
         List<Account> rl = query.getResultList();
 
-        return rl.get(0).getPassword();
+        Account account = rl.get(0);
+
+        return account;
 
     }
 
     @Override
-    public int retrieveAccountId(String nickname){
+    public Account retrieveAccountFromID(int account_id){
 
         TypedQuery<Account> query = em.createQuery("SELECT a FROM Account a " +
-                "WHERE a.nickname = :nickname", Account.class);
-        query.setParameter("nickname", nickname);
+                "WHERE a.account_id = :account_id", Account.class);
+        query.setParameter("account_id", account_id);
 
         List<Account> rl = query.getResultList();
 
-        return rl.get(0).getOid();
+        Account account = rl.get(0);
+
+        return account;
+
+    }
+
+    @Override
+    public List<Badges> retrieveAccountBadges(Account account){
+
+        int account_id = account.getOid();
+
+        TypedQuery<Badges> query = em.createQuery("SELECT b FROM Badges b, Account a, AccountBadges ab " +
+                "WHERE a.account_id = :account_id AND b.badge_id = ab.badge_id AND a.account_id = ab.account_id",
+                Badges.class);
+        query.setParameter("account_id", account_id);
+
+        List<Badges> rl = query.getResultList();
+
+        return rl;
+
+    }
+
+    @Override
+    public void createAccount(Account account){
+
+        em.getTransaction().begin();
+        em.persist(account);
+        em.getTransaction().commit();
+        em.close();
+
+    }
+
+    @Override
+    public void insertAccountLecture(int lecture_id, int account_id){
+
+        AccountLecture accountLecture = new AccountLecture();
+        accountLecture.setAccount_id(account_id);
+        accountLecture.setLetcure_id(lecture_id);
+
+        em.getTransaction().begin();
+        em.persist(accountLecture);
+        em.getTransaction().commit();
+        em.close();
+
+    }
+
+    @Override
+    public void insertAccountBadge(int badge_id, int account_id){
+
+        AccountBadges accountBadges = new AccountBadges();
+        accountBadges.setBadge_id(badge_id);
+        accountBadges.setBadge_id(badge_id);
+
+        em.getTransaction().begin();
+        em.persist(badge_id);
+        em.getTransaction().commit();
+        em.close();
 
     }
 

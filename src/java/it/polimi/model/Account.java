@@ -14,7 +14,7 @@ public class Account implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int oid;
+    private int account_id;
 
     private String name;
     private String surname;
@@ -23,13 +23,14 @@ public class Account implements Serializable {
     private String mail;
     private String age;
 
-    // Getters and Setters
+// ---------- GETTERS AND SETTERS ----------//
+
     public int getOid() {
-        return oid;
+        return account_id;
     }
 
     public void setOid(int oid) {
-        this.oid = oid;
+        this.account_id = oid;
     }
 
     public String getName() {

@@ -26,6 +26,8 @@ public class Lecture {
     private int answer_4;
     private int answer_5;
 
+// ---------- GETTERS AND SETTERS ----------//
+
     public int getLecture_ID() {
         return lecture_ID;
     }

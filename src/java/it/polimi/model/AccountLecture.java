@@ -1,23 +1,40 @@
 package it.polimi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by Jacopo Magni on 24/10/2016.
  */
 @Entity
+@IdClass(AccountLectureID.class)
 public class AccountLecture {
 
     public AccountLecture() {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int oid;
+    private int account_id;
+    @Id
+    private int letcure_id;
 
-    private String name;
-    private String surname;
+// ---------- GETTERS AND SETTERS ----------//
+
+    public int getAccount_id() {
+        return account_id;
+    }
+
+    public void setAccount_id(int account_id) {
+        this.account_id = account_id;
+    }
+
+    public int getLetcure_id() {
+        return letcure_id;
+    }
+
+    public void setLetcure_id(int letcure_id) {
+        this.letcure_id = letcure_id;
+    }
+
+
+
 }

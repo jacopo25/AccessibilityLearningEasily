@@ -20,6 +20,8 @@ public class Course {
 
     private String course_name;
 
+// ---------- GETTERS AND SETTERS ----------//
+
     public int getCourse_ID() {
         return course_ID;
     }

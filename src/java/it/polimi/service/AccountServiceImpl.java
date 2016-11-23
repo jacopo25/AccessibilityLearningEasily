@@ -1,9 +1,12 @@
 package it.polimi.service;
 
 import it.polimi.model.Account;
+import it.polimi.model.Badges;
 import it.polimi.repository.AccountRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Created by Jacopo Magni on 27/10/2016.
@@ -21,9 +24,9 @@ public class AccountServiceImpl implements AccountService {
         boolean result = false;
         String passwordInserted = account.getPassword();
 
-        String passwordDatabase = repo.retrievePassword(account.getNickname());
-        System.out.println("PSW DB:"+passwordDatabase);
-        System.out.println("PSW inserted"+passwordInserted);
+        Account accountFromNickname = repo.retrieveAccountFromNickname(account.getNickname());
+        String passwordDatabase = accountFromNickname.getPassword();
+
         if(passwordInserted.equals(passwordDatabase)){
             result = true;
         }
@@ -34,10 +37,52 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public int retrieveAccountId(Account account){
 
-        int id = repo.retrieveAccountId(account.getNickname());
+        Account accountFromNickname = repo.retrieveAccountFromNickname(account.getNickname());
 
-        return id;
+        int account_id = accountFromNickname.getOid();
 
+        return account_id;
+
+    }
+
+    @Override
+    public Account retrieveAccountFromID(int account_id){
+
+        Account account =  repo.retrieveAccountFromID(account_id);
+
+        return account;
+
+    }
+
+    @Override
+    public Account retrieveAccountFromNickname(String nickname){
+
+        Account account = repo.retrieveAccountFromNickname(nickname);
+
+        return account;
+    }
+
+    @Override
+    public List<Badges> retrieveAccountBadges(Account account){
+
+        List<Badges> badgesList = repo.retrieveAccountBadges(account);
+
+        return badgesList;
+    }
+
+    @Override
+    public void createAccount(Account account){
+        repo.createAccount(account);
+    }
+
+    @Override
+    public void insertAccountLecture(int lecture_id, int account_id){
+        repo.insertAccountLecture(lecture_id, account_id);
+    }
+
+    @Override
+    public void insertAccountBadge(int badge_id, int account_id){
+        repo.insertAccountBadge(badge_id, account_id);
     }
 
 }
