@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: Jacopo Magni
@@ -19,7 +20,23 @@
 
 <header>
     <div class="innertube">
+
         <h1>History Course</h1>
+
+        <div class="usefullLink">
+            <spring:url value="/courses" var="course"/>
+            <a href="${course}" id="linkCourse">Courses</a>
+
+            <spring:url value="/profilePage" var="profile"/>
+            <a href="${profile}" id="linkProfile">Your Profile</a>
+
+            <spring:url value="/aboutUs" var="about"/>
+            <a href="${about}" id="linkAbout">About Us</a>
+
+            <spring:url value="/index" var="logout"/>
+            <a href="${logout}" id="linkLogOut">Logout</a>
+        </div>
+
     </div>
 </header>
 
@@ -28,8 +45,8 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <h1>Heading</h1>
-                <p><script>generateText(20)</script></p>
+                <h1>History Course</h1>
+                <p>Qui spieghiamo il corso!</p>
             </div>
         </div>
     </main>

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'fff_tusjbold';
+    src: url('../font/fff_tusj-webfont.woff2') format('woff2'),
+    url('../font/fff_tusj-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     margin:0;
     padding:0;
@@ -21,42 +30,33 @@ header h1 {
 main {
     float: left;
     width: 100%;
+    overflow: auto;
+
 }
 
 nav {
+    overflow: auto;
     float: left;
+    min-height: 100%;
     width: 230px;
     margin-left: -230px;
-    background: #eee;
+    background-image: url("../images/homepage-bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
     height: 50px;
     width: 100%;
-    background: #ccc;
+    background-image: url("../images/homepage-bg.jpg");
+    background-position: center;
+    background-size: cover;
     text-align: center;
 
-}
-
-#wrapper {
-    overflow: hidden;
-    position:relative;
-    padding: 0;
-    min-height: 100%;
-    margin-bottom: 50px; /* Height of footer*/
-}
-
-#content {
-    margin-right: 230px; /* Same as 'nav' width */
-}
-
-.innertube {
-    margin: 15px; /* Padding for content */
-    margin-top: 0;
 }
 
 p {
@@ -65,11 +65,89 @@ p {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 nav ul a {
-    color: darkgreen;
+    color: white;
     text-decoration: none;
 }
+
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    min-height: 100%;
+}
+
+#content {
+    margin-right: 230px; /* Same as 'nav' width */
+}
+
+#homepage {
+    font-family: 'fff_tusjbold';
+    float: left;
+    text-align: left;
+}
+
+#button_about {
+    font-weight:bold;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: white;
+    background-color: transparent;
+    border: transparent;
+}
+
+#button_course {
+    font-weight:bold;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: white;
+    background-color: transparent;
+    border: transparent;
+}
+
+#button_profile {
+    font-weight:bold;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: white;
+    background-color: transparent;
+    border: transparent;
+
+}
+
+#button_logout {
+    font-weight:bold;
+    padding-top: 10px;
+    float:right;
+    color: white;
+    background-color: transparent;
+    border: transparent;
+}
+
+#footerText {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.innertube {
+    margin: 0 15px 15px; /* Padding for content */
+}
+
+.innertubeHeader {
+    /* Padding for content */
+    margin: 0 15px 15px;
+    text-align: right;
+}
+
+.usefulLink{
+    margin-top: 0px;
+    text-align: right;
+}
+
+.innertubeFooter {
+    text-align: center;
+}
+

@@ -14,7 +14,6 @@ import java.util.List;
  * Created by Jacopo Magni on 27/10/2016.
  */
 @Service
-@Transactional
 public class AccountServiceImpl implements AccountService {
 
 

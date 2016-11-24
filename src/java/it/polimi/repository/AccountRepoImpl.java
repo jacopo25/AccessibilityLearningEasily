@@ -4,23 +4,21 @@ import it.polimi.model.*;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by Jacopo Magni on 24/10/2016.
  */
 @Repository
-@Transactional("transactionManager")
 public class AccountRepoImpl implements AccountRepo{
 
     /**
      *  {@link javax.persistence.EntityManager} object to access the DB
      */
-    @PersistenceContext(unitName = "AccountUnit")
+    @PersistenceContext(unitName = "AccountUnit", type = PersistenceContextType.EXTENDED)
     protected EntityManager em;
+
 
     @Override
     public Account retrieveAccountFromNickname(String nickname){
@@ -89,7 +87,7 @@ public class AccountRepoImpl implements AccountRepo{
     public void createAccount(Account account){
 
         em.persist(account);
-
+        System.out.println("Prova: " + account.getName());
     }
 
     @Override
