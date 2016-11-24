@@ -36,7 +36,7 @@
 
 <div class="bgimg">
 
-    <form class="form" method="post" autocomplete="off">
+    <form class="form" method="post" autocomplete="off" id="regForm">
 
         <div class="w3-center">
             <div class="Registration">Registration</div>
@@ -92,20 +92,7 @@
 
     </form>
 
-    <button class="w2ui-btn" onclick="popup()">Open Popup</button>
-
 </div>
-
-<script type="text/javascript">
-    function popup() {
-        w2popup.open({
-            body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
-            buttons: '<button  type="button">'+
-                     '<spring:url value="/login" var="ConfReg"/>'+
-                     '<a href="${ConfReg}" style="text-decoration: none; font-size: 10px">Go to log in</a></button>'
-        });
-    }
-</script>
 
 <script type="text/javascript">
 
@@ -116,6 +103,24 @@
         } else
             $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW");
     });
+
+</script>
+
+<script type="text/javascript">
+
+
+    $( "#regForm" ).submit(function( event ) {
+
+        w2popup.open({
+            body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
+            buttons: '<button  type="button">'+
+                     '<spring:url value="/login" var="confReg"/>'+
+                     '<a href="${confReg}" style=" font-size: 15px">Go to log in</a></button>'
+        });
+
+        event.preventDefault();
+    });
+
 
 </script>
 

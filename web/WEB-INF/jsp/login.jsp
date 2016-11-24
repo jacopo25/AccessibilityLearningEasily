@@ -16,6 +16,9 @@
           type="text/css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
     <style type="text/css">
         .LogIn{
@@ -57,56 +60,25 @@
 
 </div>
 
-<div id="boxes">
-    2
-    <div id="dialog" class="window">
-        3
-        Your Content Goes Here
-        4
-        <div id="popupfoot"> <a href="#" class="close agree">I agree</a> | <a class="agree"style="color:red;" href="#">I do not agree</a> </div>
-        5
-    </div>
-    6
-    <div id="mask"></div>
-    7
-</div>
-
 <script type="text/javascript">
-    var confirmReg = ${account.confirmReg};
+    //var confirmReg = ${account.confirmReg};
     //var sec = Math.floor(Date.now());
     //var tempo = new Date(sec);
     //var m = tempo.getMilliseconds();
     //alert("tempo quando carico login "+tempo+" millisecondi "+m);
-    alert("ConfirmReg "+confirmReg);
-    if(confirmReg == true) {
-        $(document).ready(function() {
-            var id = '#dialog';
+    //alert("ConfirmReg "+confirmReg);
+    //if(confirmReg == true) {
+    //alert(${account.name});
+      //  $(document).ready(function() {
 
-//Get the screen height and width
-            var maskHeight = $(document).height();
-            var maskWidth = $(window).width();
+//            w2popup.open({
+  //              body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
+    //            buttons: '<button  type="button" onclick="w2popup.close();">Go to log in</a></button>'
+      //      });
 
-//Set heigth and width to mask to fill up the whole screen
-            $('#mask').css({'width':maskWidth,'height':maskHeight});
+        //});
 
-//transition effect
-            $('#mask').fadeIn(500);
-            $('#mask').fadeTo("slow",0.9);
-
-//Get the window height and width
-            var winH = $(window).height();
-            var winW = $(window).width();
-
-//Set the popup window to center
-            $(id).css('top',  winH/2-$(id).height()/2);
-            $(id).css('left', winW/2-$(id).width()/2);
-
-//transition effect
-            $(id).fadeIn(2000);
-
-        });
-
-    }
+    //}
 </script>
 
 </body>

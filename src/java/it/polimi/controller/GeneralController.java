@@ -25,9 +25,9 @@ public class GeneralController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String formLogin(@ModelAttribute("Account")Account account,Model model, RedirectAttributes redirect) {
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println("Tempo quando sono in login "+timestamp);
-        System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
+        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        //System.out.println("Tempo quando sono in login "+timestamp);
+        //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
         model.addAttribute(new Account());
 
         return "/login";
@@ -55,10 +55,10 @@ public class GeneralController {
 
 
         service.createAccount(account);
-        account.setConfirmReg(true);
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println("Tempo quando clicco registrati "+timestamp);
-        System.out.println("Conferma registrazione quando clicco registrati "+account.getConfirmReg());
+        //account.setConfirmReg(true);
+        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        //System.out.println("Tempo quando clicco registrati "+timestamp);
+        //System.out.println("Conferma registrazione quando clicco registrati "+account.getConfirmReg());
         redirect.addFlashAttribute("Account", account);
 
         return "redirect:/login";
