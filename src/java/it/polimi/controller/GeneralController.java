@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
+
 /**
  * Created by Jacopo Magni on 24/10/2016.
  */
@@ -46,6 +47,7 @@ public class GeneralController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String formRegistration(@ModelAttribute("Account")Account account, RedirectAttributes redirect) {
+
 
         service.createAccount(account);
         redirect.addFlashAttribute("Account", account);

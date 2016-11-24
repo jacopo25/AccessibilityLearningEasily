@@ -3,6 +3,8 @@ package it.polimi.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
+
 /**
  * Created by Jacopo Magni on 24/10/2016.
  */
@@ -17,6 +19,7 @@ public class Account implements Serializable {
     private int account_id;
 
     private String name;
+
     private String surname;
     private String nickname;
     private String password;

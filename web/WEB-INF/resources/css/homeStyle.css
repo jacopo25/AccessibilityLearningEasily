@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'MyWebFont';
-    url('FFF_Tusj.ttf')  format('truetype');
-}
-body,h1 {
-    font-family: "Raleway", sans-serif;
-    color:white;
+    font-family: 'fff_tusjbold';
+    src: url('../font/fff_tusj-webfont.woff2') format('woff2'),
+    url('../font/fff_tusj-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body, html {height: 100%}
+
 .bgimg {
     min-height: 100%;
     background-image: url("../images/homepage-bg.jpg");
@@ -29,7 +30,6 @@ body, html {height: 100%}
     font-size: 70px;
 }
 
-
 .form input[type=text]
 {
     color: white;
@@ -42,6 +42,7 @@ body, html {height: 100%}
     padding: 0 0 0 0;
     font-style: italic;
 }
+
 .form input[type=password]
 {
     color: white;
@@ -58,7 +59,6 @@ body, html {height: 100%}
 .inputs{
     margin-top: 50px;
 }
-
 
 #submit{
     background: transparent;
@@ -94,13 +94,14 @@ body, html {height: 100%}
     padding-right: 15px;
     color: white;
 }
+
 #linkLog
 {
     font-weight:bold;
     padding-right: 15px;
     color: white;
-
 }
+
 #linkReg
 {
     font-weight:bold;

@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: rezzo
@@ -12,11 +13,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
-          href="${pageContext.request.contextPath}/resources/css/homeStyle.css"
+          href="../resources/css/homeStyle.css"
           type="text/css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <style type="text/css">
+        .Registration{
+            font-family: 'fff_tusjbold';
+            color: white;
+        }
+    </style>
     <title>Registration</title>
-
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
@@ -35,7 +41,8 @@
 
                 <spring:bind path="account.name">
                     <input type="text" placeholder="first name" id="name"
-                           name="${status.expression}" value="${status.value}"><br>
+                           name="${status.expression}" value="${status.value}">
+                    <br>
                 </spring:bind>
 
                 <spring:bind path="account.surname">

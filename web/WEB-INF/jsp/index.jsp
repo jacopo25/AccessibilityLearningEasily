@@ -12,11 +12,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet"
-            href="${pageContext.request.contextPath}/resources/css/homeStyle.css"
-            type="text/css">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="../resources/css/homeStyle.css" type="text/css">
+      <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <style type="text/css">
+      h1{
+        font-family: 'fff_tusjbold';
+        color: white;
+      }
+    </style>
     <title>LE - Homepage</title>
   </head>
   <body>

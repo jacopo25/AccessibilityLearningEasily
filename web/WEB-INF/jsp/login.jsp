@@ -16,6 +16,12 @@
           type="text/css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style type="text/css">
+        .LogIn{
+            font-family: 'fff_tusjbold';
+            color: white;
+        }
+    </style>
     <title>LE - Login</title>
 </head>
 <body>
