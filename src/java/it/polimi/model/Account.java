@@ -25,6 +25,7 @@ public class Account implements Serializable {
     private String password;
     private String email;
     private String age;
+    private boolean confirmReg;
 
 // ---------- GETTERS AND SETTERS ----------//
 
@@ -83,5 +84,9 @@ public class Account implements Serializable {
     public void setAge(String age) {
         this.age = age;
     }
+
+    public boolean getConfirmReg() {return confirmReg;}
+
+    public void setConfirmReg(boolean confirmReg) {this.confirmReg = confirmReg;}
 
 }

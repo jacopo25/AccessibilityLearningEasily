@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import java.sql.Timestamp;
 
 
 
@@ -23,8 +24,12 @@ public class GeneralController {
     private AccountService service;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String formLogin(Model model) {
+    public String formLogin(@ModelAttribute("Account")Account account,Model model, RedirectAttributes redirect) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        System.out.println("Tempo quando sono in login "+timestamp);
+        System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
         model.addAttribute(new Account());
+
         return "/login";
     }
 
@@ -50,13 +55,17 @@ public class GeneralController {
 
 
         service.createAccount(account);
+        account.setConfirmReg(true);
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        System.out.println("Tempo quando clicco registrati "+timestamp);
+        System.out.println("Conferma registrazione quando clicco registrati "+account.getConfirmReg());
         redirect.addFlashAttribute("Account", account);
 
-        return "redirect:/profilePage";
+        return "redirect:/login";
     }
 
     @RequestMapping(value = "/profilePage", method = RequestMethod.GET)
-    public String formLogin(@ModelAttribute("account")Account account,Model model) {
+    public String formProfile(@ModelAttribute("account")Account account,Model model) {
 
         Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
         model.addAttribute(accountRetrived);

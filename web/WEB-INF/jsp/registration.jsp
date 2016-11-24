@@ -16,12 +16,18 @@
           href="../resources/css/homeStyle.css"
           type="text/css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
     <style type="text/css">
         .Registration{
             font-family: 'fff_tusjbold';
             color: white;
         }
     </style>
+
+
+
     <title>Registration</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -72,8 +78,12 @@
 
                 <input type="password" placeholder="confirm password" id="confirm_password">
                 <div id='message'></div>
-
                 <br>
+
+                <spring:bind path="account.confirmReg">
+                    <input type="hidden"
+                           name="${status.expression}" value="${account.confirmReg}">
+                </spring:bind>
 
                 <button type="submit" id="submit" disabled="true">Register</button>
 
@@ -82,7 +92,20 @@
 
     </form>
 
+    <button class="w2ui-btn" onclick="popup()">Open Popup</button>
+
 </div>
+
+<script type="text/javascript">
+    function popup() {
+        w2popup.open({
+            body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
+            buttons: '<button  type="button">'+
+                     '<spring:url value="/login" var="ConfReg"/>'+
+                     '<a href="${ConfReg}" style="text-decoration: none; font-size: 10px">Go to log in</a></button>'
+        });
+    }
+</script>
 
 <script type="text/javascript">
 
@@ -93,6 +116,7 @@
         } else
             $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW");
     });
+
 </script>
 
 </body>
