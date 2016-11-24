@@ -28,21 +28,23 @@ header h1 {
 }
 
 main {
+    padding-bottom: 10010px;
+    margin-bottom: -10010px;
     float: left;
     width: 100%;
     overflow: auto;
-
 }
 
 nav {
+    padding-bottom: 10010px;
+    margin-bottom: -10010px;
     overflow: auto;
     float: left;
     min-height: 100%;
     width: 230px;
     margin-left: -230px;
-    background-image: url("../images/homepage-bg.jpg");
-    background-position: center;
     background-size: cover;
+    background: url("../images/homepage-bg.jpg") repeat-y center;
 }
 
 footer {
@@ -65,6 +67,8 @@ p {
 
 nav ul {
     list-style-type: none;
+    margin: 0;
+    padding-top: 10px;
 }
 
 nav ul a {
@@ -73,9 +77,10 @@ nav ul a {
 }
 
 #wrapper {
+    padding-bottom: 10010px;
+    margin-bottom: -10010px;
     overflow: hidden;
     position: relative;
-    padding: 0;
     min-height: 100%;
 }
 
@@ -132,8 +137,48 @@ nav ul a {
     padding-top: 15px;
 }
 
+#bigLinkNav{
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+#thisBigLinkNav {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+    color: #46AFFA;
+}
+
+#smallLinkNav{
+    text-decoration: none;
+    color: white;
+
+}
+
+#thisSmallLinkNav {
+    text-decoration: none;
+    color: #46AFFA;
+}
+
+#bigLinkHeader{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#thisBigLinkHeader {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #46AFFA;
+}
+
 .innertube {
-    margin: 0 15px 15px; /* Padding for content */
+    margin: 15px; /* Padding for content */
+    margin-top: 0;
 }
 
 .innertubeHeader {
@@ -149,5 +194,9 @@ nav ul a {
 
 .innertubeFooter {
     text-align: center;
+}
+
+.innertubeNav {
+    margin: 0 0 3px 0;
 }
 
