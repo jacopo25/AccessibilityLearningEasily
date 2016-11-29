@@ -54,5 +54,14 @@
     <orderEntry type="library" name="jQuery UI-1.10.2" level="application" />
     <orderEntry type="library" name="jquery.validation-DefinitelyTyped" level="application" />
     <orderEntry type="library" name="w2ui-DefinitelyTyped" level="application" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/geronimo-validation_1.0_spec-1.0-CR5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

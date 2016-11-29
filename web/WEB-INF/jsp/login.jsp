@@ -1,4 +1,5 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Jacopo Magni
@@ -32,7 +33,7 @@
 
 <div class="bgimg">
 
-    <form class="form" method="post" autocomplete="off">
+    <form:form class="form" method="POST" autocomplete="off" modelAttribute="Account">
 
         <div class="w3-center">
             <div class="LogIn">Log In</div>
@@ -41,14 +42,22 @@
 
         <div class="inputs">
 
-            <spring:bind path="account.nickname">
-                <input type="text" placeholder="nickname" id="nickname"
-                       name="${status.expression}" value="${status.value}"><br>
+            <spring:bind path="nickname">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input path ="nickname" type="text" placeholder="nickname" id="nickname"
+                                name="${status.expression}" value="${status.value}"/>
+                    <form:errors path="nickname" />
+                </div>
+                <br>
             </spring:bind>
 
-            <spring:bind path="account.password">
-                <input type="password" placeholder="password" id="password"
-                       name="${status.expression}" value="${status.value}"><br>
+            <spring:bind path="password">
+                <!--<div class="form-group ${status.error ? 'has-error' : ''}">-->
+                    <form:input path ="password" type="password" placeholder="password" id="password"
+                                name="${status.expression}" value="${status.value}"/>
+                    <form:errors path="password" />
+                <!--</div>-->
+                <br>
             </spring:bind>
 
             <button type="submit" id="submit">Sign In</button>
@@ -56,7 +65,7 @@
         </div>
         </div>
 
-    </form>
+    </form:form>
 
 </div>
 

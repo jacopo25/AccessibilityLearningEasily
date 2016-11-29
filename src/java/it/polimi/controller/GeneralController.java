@@ -1,15 +1,19 @@
 package it.polimi.controller;
 
 
+
 import it.polimi.model.Account;
 import it.polimi.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.validation.Valid;
 import java.sql.Timestamp;
 
 
@@ -24,23 +28,29 @@ public class GeneralController {
     private AccountService service;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String formLogin(@ModelAttribute("Account")Account account,Model model, RedirectAttributes redirect) {
+    public String formLogin(Model model) {
         //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         //System.out.println("Tempo quando sono in login "+timestamp);
         //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
-        model.addAttribute(new Account());
+        model.addAttribute("Account",new Account());
 
         return "/login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginForm(@ModelAttribute("Account")Account account, RedirectAttributes redirect){
-        if(!service.validatePassword(account)){
-            return "/loginFailed";
-        } else {
-            account.setOid(service.retrieveAccountId(account));
-            redirect.addFlashAttribute("account", account);
-            return "redirect:/profilePage";
+    public String loginForm(@Valid @ModelAttribute("Account")Account account, BindingResult bindingResult, RedirectAttributes redirect){
+        if(bindingResult.hasErrors()){
+            return "/login";
+            }
+        else {
+            if (!service.validatePassword(account)) {
+
+                return "redirect:/profilePage";
+            } else {
+                account.setOid(service.retrieveAccountId(account));
+                redirect.addFlashAttribute("account", account);
+                return "redirect:/profilePage";
+            }
         }
     }
 

@@ -19,4 +19,8 @@
 
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
 
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="resources.validationMessages" />
+    </bean>
+
 </beans>

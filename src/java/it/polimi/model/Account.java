@@ -3,7 +3,8 @@ package it.polimi.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
-
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * Created by Jacopo Magni on 24/10/2016.
@@ -18,10 +19,16 @@ public class Account implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int account_id;
 
+
+
     private String name;
 
     private String surname;
+    @NotNull
+    @NotBlank(message = "Nickname field must not be blank")
     private String nickname;
+    @NotNull
+    @NotBlank(message = "Password field must not be blank")
     private String password;
     private String email;
     private String age;
