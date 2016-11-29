@@ -1,3 +1,4 @@
+/* GENERAL STYLE */
 @font-face {
     font-family: 'fff_tusjbold';
     src: url('../font/fff_tusj-webfont.woff2') format('woff2'),
@@ -7,13 +8,16 @@
 
 }
 
-body {
+html, body {
+    height: 100%;
+    min-height: 100%;
     margin:0;
     padding:0;
     font-family: Sans-Serif;
     line-height: 1.5em;
 }
 
+/* STYLE FOR THE GENERAL STRUCTURE OF THE PAGES */
 header {
     background-image: url("../images/homepage-bg.jpg");
     background-position: center;
@@ -41,8 +45,8 @@ nav {
     overflow: auto;
     float: left;
     min-height: 100%;
-    width: 230px;
-    margin-left: -230px;
+    width: 260px;
+    margin-left: -260px;
     background-size: cover;
     background: url("../images/homepage-bg.jpg") repeat-y center;
 }
@@ -54,8 +58,7 @@ footer {
     right: 0;
     height: 50px;
     width: 100%;
-    background-image: url("../images/homepage-bg.jpg");
-    background-position: center;
+    background: url("../images/homepage-bg.jpg") center;
     background-size: cover;
     text-align: center;
 
@@ -85,7 +88,8 @@ nav ul a {
 }
 
 #content {
-    margin-right: 230px; /* Same as 'nav' width */
+    margin-right: 250px; /* Same as 'nav' width */
+    margin-bottom: 50px; /* Same as footer */
 }
 
 #homepage {
@@ -94,86 +98,58 @@ nav ul a {
     text-align: left;
 }
 
-#button_about {
-    font-weight:bold;
-    padding-top: 10px;
-    padding-right: 15px;
-    color: white;
-    background-color: transparent;
-    border: transparent;
-}
-
-#button_course {
-    font-weight:bold;
-    padding-top: 10px;
-    padding-right: 15px;
-    color: white;
-    background-color: transparent;
-    border: transparent;
-}
-
-#button_profile {
-    font-weight:bold;
-    padding-top: 10px;
-    padding-right: 15px;
-    color: white;
-    background-color: transparent;
-    border: transparent;
-
-}
-
-#button_logout {
-    font-weight:bold;
-    padding-top: 10px;
-    float:right;
-    color: white;
-    background-color: transparent;
-    border: transparent;
-}
-
 #footerText {
     color: #ffffff;
     text-align: center;
     padding-top: 15px;
 }
 
-#bigLinkNav{
+.bigLinkNav{
     text-decoration: none;
+    text-align: center;
     color: white;
-    font-size: 21px;
+    font-size: 24px;
     font-weight: bold;
+    margin-left: 20px;
 }
 
-#thisBigLinkNav {
+.thisBigLinkNav {
     text-decoration: none;
-    font-size: 21px;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: #46AFFA;
 }
 
-#smallLinkNav{
+.smallLinkNav{
+    margin-left: -15px;
     text-decoration: none;
     color: white;
 
 }
 
-#thisSmallLinkNav {
+.thisSmallLinkNav {
     text-decoration: none;
     color: #46AFFA;
 }
 
-#bigLinkHeader{
+.bigLinkHeader{
     text-decoration: none;
     color: white;
     font-size: 25px;
     font-weight: bold;
+    padding-top: 50px;
+    padding-right: 15px;
 }
 
-#thisBigLinkHeader {
+.thisBigLinkHeader {
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
     color: #46AFFA;
+    margin-top: 50px;
+    padding-right: 15px;
 }
 
 .innertube {
@@ -188,7 +164,7 @@ nav ul a {
 }
 
 .usefulLink{
-    margin-top: 0px;
+    padding-top: 15px;
     text-align: right;
 }
 
@@ -197,6 +173,11 @@ nav ul a {
 }
 
 .innertubeNav {
-    margin: 0 0 3px 0;
+    margin: 0 0 0 0;
 }
 
+.hidden {
+    position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+
+/* STILE FOR THE PAGE xxx */

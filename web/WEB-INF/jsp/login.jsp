@@ -60,26 +60,5 @@
 
 </div>
 
-<script type="text/javascript">
-    //var confirmReg = ${account.confirmReg};
-    //var sec = Math.floor(Date.now());
-    //var tempo = new Date(sec);
-    //var m = tempo.getMilliseconds();
-    //alert("tempo quando carico login "+tempo+" millisecondi "+m);
-    //alert("ConfirmReg "+confirmReg);
-    //if(confirmReg == true) {
-    //alert(${account.name});
-      //  $(document).ready(function() {
-
-//            w2popup.open({
-  //              body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
-    //            buttons: '<button  type="button" onclick="w2popup.close();">Go to log in</a></button>'
-      //      });
-
-        //});
-
-    //}
-</script>
-
 </body>
 </html>

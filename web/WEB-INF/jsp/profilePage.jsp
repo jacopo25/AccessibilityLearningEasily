@@ -1,15 +1,9 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Jacopo Magni
-  Date: 03/11/2016
-  Time: 15:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/css/generalStyle.css"
           type="text/css">
@@ -17,32 +11,24 @@
 </head>
 
 <body>
-
+<a href="#content" class="hidden">Skip to my Profile details</a>
 <header>
     <div class="innertubeHeader">
 
         <h1 id="homepage">LEARNING EASILY</h1>
 
         <div class="usefulLink">
-            <button id="button_course" type="button" >
                 <spring:url value="/courses" var="course"/>
-                <a href = "${course}" id = "bigLinkHeader">Courses</a>
-            </button>
+                <a href = "${course}" class = "bigLinkHeader">Courses List</a>
 
-            <button id="button_profile" type="button" >
                 <spring:url value="/profilePage" var="profile"/>
-                <a href="${profile}" id = "thisBigLinkHeader">Your Profile</a>
-            </button>
+                <a href="${profile}" class = "thisBigLinkHeader">Your Profile</a>
 
-            <button id="button_about" type="button" >
                 <spring:url value="/aboutUs" var="about"/>
-                <a href="${about}" id = "bigLinkHeader">About Us</a>
-            </button>
+                <a href="${about}" class = "bigLinkHeader">About Us</a>
 
-            <button id="button_logout" type="button" >
                 <spring:url value="/index" var="logout"/>
-                <a href="${logout}" id = "bigLinkHeader">Logout</a>
-            </button>
+                <a href="${logout}" class = "bigLinkHeader">Logout</a>
         </div>
 
     </div>
@@ -70,26 +56,26 @@
             <br>
 
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" id="thisBigLinkNav">My Profile</a>
+            <a href="${profile}" class="thisBigLinkNav">My Profile Page</a>
 
             <br>
             <br>
             <br>
 
             <spring:url value="/historyCourse" var="historyCourse"/>
-            <a href="${historyCourse}" id="bigLinkNav">History Course</a>
+            <a href="${historyCourse}" class ="bigLinkNav">History Overview</a>
             <ul>
                 <li>
                     <spring:url value="/historyLectureOne" var="historyLecture1"/>
-                    <a href="${historyLecture1}" id = "smallLinkNav">The French Revolution</a>
+                    <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - French Revolution</a>
                 </li>
                 <li>
                     <spring:url value="/historyLectureTwo" var="historyLecture2"/>
-                    <a href="${historyLecture2}" id = "smallLinkNav">The First World War</a>
+                    <a href="${historyLecture2}" class = "smallLinkNav">Lecture 2 - First World War</a>
                 </li>
                 <li>
                     <spring:url value="/historyLectureThree" var="historyLecture3"/>
-                    <a href="${historyLecture3}" id = "smallLinkNav">The Second World War</a>
+                    <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Second World War</a>
                 </li>
             </ul>
 
@@ -97,19 +83,19 @@
             <br>
 
             <spring:url value="/mathCourse" var="mathCourse"/>
-            <a href="${mathCourse}" id="bigLinkNav">Math Course</a>
+            <a href="${mathCourse}" class="bigLinkNav">Math Overview</a>
             <ul>
                 <li>
                     <spring:url value="/mathLectureOne" var="mathLecture1"/>
-                    <a href="${historyLecture1}" id = "smallLinkNav">The French Revolution</a>
+                    <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - Equations</a>
                 </li>
                 <li>
                     <spring:url value="/mathLectureTwo" var="mathLecture2"/>
-                    <a href="${historyLecture2}" id = "smallLinkNav">The First World War</a>
+                    <a href="${historyLecture2}" class = "smallLinkNav">Lecture 2 - Inequalities</a>
                 </li>
                 <li>
                     <spring:url value="/mathLectureThree" var="mathLecture3"/>
-                    <a href="${historyLecture3}" id = "smallLinkNav">The Second World War</a>
+                    <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Quadratic Equations</a>
                 </li>
             </ul>
         </div>
