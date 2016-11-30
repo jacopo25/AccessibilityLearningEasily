@@ -37,7 +37,7 @@
         <div id="content">
             <div class="innertube">
                 <div class ="containerIntro">
-                    <h1>List of all courses of Learning Easily </h1>
+                    <h1>List of all courses of Learning EasilyHi ${Account.nickname} of age ${Account.age}</h1>
                     <!-- Description of the page content -->
                     <p>Here you can see all the available courses and the upcoming ones!</p>
                 </div>

@@ -18,6 +18,17 @@
         <h1 id="homepage">LEARNING EASILY</h1>
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
+
+            <form method="post">
+
+                <spring:bind path="account.nickname">
+                    <input type="hidden"
+                           name="${status.expression}" value="${account.nickname}">
+                </spring:bind>
+
+                <input type="submit" value="Map View" >
+            </form>
+
                 <spring:url value="/profilePage" var="profile"/>
                 <a href="${profile}" class = "thisBigLinkHeader">Profile page</a>
 

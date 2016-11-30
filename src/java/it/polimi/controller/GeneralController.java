@@ -81,4 +81,23 @@ public class GeneralController {
         model.addAttribute(accountRetrived);
         return "profilePage";
     }
+
+    @RequestMapping(value = "/profilePage", method = RequestMethod.POST)
+    public String formProfile(@ModelAttribute("account")Account account, RedirectAttributes redirect) {
+
+        System.out.println("Nick da profile page"+account.getNickname());
+        //redirect.addFlashAttribute(account);
+        return "redirect:/courses";
+    }
+
+    @RequestMapping(value = "/courses", method = RequestMethod.GET)
+    public String CoursesList(/*@ModelAttribute("account")Account account,*/Model model) {
+
+        //Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
+        //model.addAttribute("account",accountRetrived);
+        return "courses";
+    }
+
+
+
 }
