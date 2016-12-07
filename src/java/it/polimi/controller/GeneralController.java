@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -26,6 +27,8 @@ public class GeneralController {
 
     @Autowired
     private AccountService service;
+
+    Account loggedUser= new Account();
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String formLogin(Model model) {
@@ -78,26 +81,19 @@ public class GeneralController {
     public String formProfile(@ModelAttribute("account")Account account,Model model) {
 
         Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
+        loggedUser = accountRetrived;
         model.addAttribute(accountRetrived);
         return "profilePage";
     }
 
-    @RequestMapping(value = "/profilePage", method = RequestMethod.POST)
-    public String formProfile(@ModelAttribute("account")Account account, RedirectAttributes redirect) {
 
-        System.out.println("Nick da profile page"+account.getNickname());
-        //redirect.addFlashAttribute(account);
-        return "redirect:/courses";
-    }
 
     @RequestMapping(value = "/courses", method = RequestMethod.GET)
-    public String CoursesList(/*@ModelAttribute("account")Account account,*/Model model) {
+    public String CoursesList(@ModelAttribute("account")Account account,Model model) {
 
-        //Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
-        //model.addAttribute("account",accountRetrived);
+        model.addAttribute("account", loggedUser);
         return "courses";
     }
-
 
 
 }

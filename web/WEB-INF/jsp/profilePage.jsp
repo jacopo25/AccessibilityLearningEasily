@@ -1,4 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
@@ -19,21 +21,11 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
-            <form method="post">
-
-                <spring:bind path="account.nickname">
-                    <input type="hidden"
-                           name="${status.expression}" value="${account.nickname}">
-                </spring:bind>
-
-                <input type="submit" value="Map View" >
-            </form>
-
-                <spring:url value="/profilePage" var="profile"/>
+            <spring:url value="/profilePage" var="profile"/>
                 <a href="${profile}" class = "thisBigLinkHeader">Profile page</a>
 
-                <spring:url value="/courses" var="course"/>
-                <a href = "${course}" class = "bigLinkHeader">Courses list</a>
+            <spring:url value="/courses" var="coursesList"/>
+            <a href="${coursesList}" class = "thisBigLinkHeader">Courses List</a>
 
                 <spring:url value="/aboutUs" var="about"/>
                 <a href="${about}" class = "bigLinkHeader">About Us</a>
@@ -60,6 +52,7 @@
                     <p><strong>Nickname: </strong> ${account.nickname} </p>
                     <p><strong>Age: </strong> ${account.age} </p>
                 </div>
+
 
                 <div>
                     <h2>Lectures completed</h2>
