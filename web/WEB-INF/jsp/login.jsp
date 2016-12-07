@@ -33,6 +33,13 @@
 
 <div class="bgimg">
 
+    <div class="innertubeHeader">
+        <div class="usefulLink">
+            <spring:url value="/" var="index"/>
+            <a href="${index}" class = "thisBigLinkHeader">Back</a>
+         </div>
+    </div>
+
     <form:form class="form" method="POST" autocomplete="off" modelAttribute="Account">
 
         <div class="w3-center">
@@ -63,9 +70,14 @@
             <button type="submit" id="submit">Sign In</button>
 
         </div>
-        </div>
+
 
     </form:form>
+
+    <spring:url value="/registration" var="register"/>
+    <a href="${register}" class = "SignUp">Sign Up</a>
+
+        </div>
 
 </div>
 

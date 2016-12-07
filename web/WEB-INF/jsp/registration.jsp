@@ -36,6 +36,13 @@
 
 <div class="bgimg">
 
+    <div class="innertubeHeader">
+        <div class="usefulLink">
+            <spring:url value="/" var="index"/>
+            <a href="${index}" class = "thisBigLinkHeader">Back</a>
+        </div>
+    </div>
+
     <form class="form" method="post" autocomplete="off" id="regForm">
 
         <div class="w3-center">

@@ -63,8 +63,9 @@ body, html {height: 100%}
 #submit{
     background: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
+    margin-bottom: 20px;
 }
 
 #button_login {
@@ -86,6 +87,7 @@ body, html {height: 100%}
 
 .usefullLink{
     text-align:right;
+    padding-top: 15px;
 }
 
 #linkAbout
@@ -146,6 +148,26 @@ body, html {height: 100%}
     bottom: 0px;
     width: 250px;
     left: 250px;
+}
+
+.thisBigLinkHeader {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #46AFFA;
+    margin-top: 50px;
+    padding-right: 15px;
+}
+
+.innertubeHeader {
+    /* Padding for content */
+    margin: 0 15px 15px;
+    text-align: right;
+}
+
+.SignUp{
+    color: white;
+    text-decoration: none;
 }
 
 

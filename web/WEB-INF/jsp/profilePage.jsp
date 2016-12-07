@@ -21,16 +21,13 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
-            <spring:url value="/profilePage" var="profile"/>
-                <a href="${profile}" class = "thisBigLinkHeader">Profile page</a>
-
-            <spring:url value="/courses" var="coursesList"/>
-            <a href="${coursesList}" class = "thisBigLinkHeader">Courses List</a>
+                <spring:url value="/courses" var="coursesList"/>
+                <a href="${coursesList}" class = "thisBigLinkHeader">Courses List</a>
 
                 <spring:url value="/aboutUs" var="about"/>
                 <a href="${about}" class = "bigLinkHeader">About Us</a>
 
-                <spring:url value="/index" var="logout"/>
+                <spring:url value="/" var="logout"/>
                 <a href="${logout}" class = "bigLinkHeader">Logout</a>
         </div>
     </div>

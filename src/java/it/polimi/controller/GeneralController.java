@@ -29,12 +29,15 @@ public class GeneralController {
     private AccountService service;
 
     Account loggedUser= new Account();
+    int cont = 0 ;
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String formLogin(Model model) {
         //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         //System.out.println("Tempo quando sono in login "+timestamp);
         //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
+        cont++;
         model.addAttribute("Account",new Account());
 
         return "/login";
@@ -80,19 +83,29 @@ public class GeneralController {
     @RequestMapping(value = "/profilePage", method = RequestMethod.GET)
     public String formProfile(@ModelAttribute("account")Account account,Model model) {
 
-        Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
-        loggedUser = accountRetrived;
-        model.addAttribute(accountRetrived);
+
+        if (cont == 1) {
+            Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
+            model.addAttribute(accountRetrived);
+            loggedUser = accountRetrived;
+            }
+         else
+            model.addAttribute(loggedUser);
         return "profilePage";
     }
 
-
-
     @RequestMapping(value = "/courses", method = RequestMethod.GET)
-    public String CoursesList(@ModelAttribute("account")Account account,Model model) {
+    public String CoursesList(Model model) {
 
         model.addAttribute("account", loggedUser);
         return "courses";
+    }
+
+    @RequestMapping(value = "/aboutUs", method = RequestMethod.GET)
+    public String Info(Model model) {
+
+        model.addAttribute("account", loggedUser);
+        return "aboutUs";
     }
 
 
