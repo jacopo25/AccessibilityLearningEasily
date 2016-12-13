@@ -8,9 +8,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
           href="../resources/css/homeStyle.css"
@@ -36,12 +37,14 @@
 
 <div class="bgimg">
 
+    <nav>
     <div class="innertubeHeader">
         <div class="usefulLink">
-            <spring:url value="/" var="index"/>
+            <spring:url value="/" var="index"></spring:url>
             <a href="${index}" class = "thisBigLinkHeader">Back</a>
         </div>
     </div>
+    </nav>
 
     <form class="form" method="post" autocomplete="off" id="regForm">
 
@@ -53,37 +56,44 @@
             <div class="inputs">
 
                 <spring:bind path="account.name">
-                    <input type="text" placeholder="first name" id="name"
+                    <label for="name" style="color: white">First Name</label>
+                    <input type="text"  id="name"
                            name="${status.expression}" value="${status.value}">
                     <br>
                 </spring:bind>
 
                 <spring:bind path="account.surname">
-                    <input type="text" placeholder="surname" id="surname"
+                    <label for="surname" style="color: white">Surname</label>
+                    <input type="text" id="surname"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
                 <spring:bind path="account.mail">
-                    <input type="text" placeholder="mail" id="mail"
+                    <label for="mail" style="color: white">Email</label>
+                    <input type="text" id="mail"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
                 <spring:bind path="account.age">
-                    <input type="text" placeholder="age" id="age"
+                    <label for="age" style="color: white">Age</label>
+                    <input type="text" id="age"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
                 <spring:bind path="account.nickname">
-                    <input type="text" placeholder="nickname" id="nickname"
+                    <label for="nickname" style="color: white">Nickname</label>
+                    <input type="text" id="nickname"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
                 <spring:bind path="account.password">
-                    <input type="password" placeholder="password" id="password"
+                    <label for="password" style="color: white">        Password</label>
+                    <input type="password" id="password"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
 
-                <input type="password" placeholder="confirm password" id="confirm_password">
+                <label for="confirm_password" style="color: white">Confirm Password</label>
+                <input type="password" id="confirm_password">
                 <div id='message'></div>
                 <br>
 

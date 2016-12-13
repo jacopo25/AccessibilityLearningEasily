@@ -11,6 +11,7 @@ body, html {height: 100%}
 
 .bgimg {
     min-height: 100%;
+    background-color: black;
     background-image: url("../images/homepage-bg.jpg");
     background-position: center;
     background-size: cover;
@@ -30,6 +31,11 @@ body, html {height: 100%}
     font-size: 70px;
 }
 
+input {
+    display: inline-block;
+
+}
+
 .form input[type=text]
 {
     color: white;
@@ -41,6 +47,8 @@ body, html {height: 100%}
     outline: none;
     padding: 0 0 0 0;
     font-style: italic;
+    display: inline-block;
+    margin-right: 200px;
 }
 
 .form input[type=password]
@@ -54,11 +62,20 @@ body, html {height: 100%}
     outline: none;
     padding: 0 0 0 0;
     font-style: italic;
+    display: inline-block;
+    margin-right: 200px;
 }
 
 .inputs{
     margin-top: 50px;
 }
+
+label{
+    display: inline-block;
+    width: 250px;
+    text-align: right;
+}
+
 
 #submit{
     background: transparent;
@@ -69,19 +86,25 @@ body, html {height: 100%}
 }
 
 #button_login {
+
     position:absolute;
     top: 80%;
     left: 20%;
+    font-size: 40px;
+    text-decoration: none;
     background-color: transparent;
-    border: #eeeeee;
+    color: white;
 }
 
 #button_register {
+
     position:absolute;
     top: 80%;
     left: 75%;
+    font-size: 40px;
     background-color: transparent;
-    border: #eeeeee;
+    color: white;
+
 
 }
 

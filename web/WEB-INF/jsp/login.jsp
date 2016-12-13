@@ -8,7 +8,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,7 +52,8 @@
 
             <spring:bind path="nickname">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input path ="nickname" type="text" placeholder="nickname" id="nickname"
+                    <label for="nickname" style="color: white">Nickname</label>
+                    <form:input path ="nickname" type="text" id="nickname"
                                 name="${status.expression}" value="${status.value}"/>
                     <form:errors path="nickname" />
                 </div>
@@ -60,7 +62,8 @@
 
             <spring:bind path="password">
                 <!--<div class="form-group ${status.error ? 'has-error' : ''}">-->
-                    <form:input path ="password" type="password" placeholder="password" id="password"
+                <label for="password" style="color: white">Password</label>
+                    <form:input path ="password" type="password" id="password"
                                 name="${status.expression}" value="${status.value}"/>
                     <form:errors path="password" />
                 <!--</div>-->
