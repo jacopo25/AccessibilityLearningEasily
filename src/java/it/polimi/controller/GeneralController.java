@@ -29,7 +29,7 @@ public class GeneralController {
     private AccountService service;
 
     Account loggedUser= new Account();
-    int cont = 0 ;
+    boolean logVerify = false;
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -37,7 +37,7 @@ public class GeneralController {
         //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         //System.out.println("Tempo quando sono in login "+timestamp);
         //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
-        cont++;
+        logVerify = true;
         model.addAttribute("Account",new Account());
 
         return "/login";
@@ -63,6 +63,7 @@ public class GeneralController {
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String formRegistration(Model model) {
         model.addAttribute(new Account());
+        logVerify = false;
         return "/registration";
     }
 
@@ -84,19 +85,21 @@ public class GeneralController {
     public String formProfile(@ModelAttribute("account")Account account,Model model) {
 
 
-        if (cont == 1) {
+        if (logVerify == true) {
             Account accountRetrived = service.retrieveAccountFromNickname(account.getNickname());
             model.addAttribute(accountRetrived);
             loggedUser = accountRetrived;
             }
          else
             model.addAttribute(loggedUser);
+        logVerify = false;
         return "profilePage";
     }
 
     @RequestMapping(value = "/courses", method = RequestMethod.GET)
     public String CoursesList(Model model) {
 
+        logVerify = false;
         model.addAttribute("account", loggedUser);
         return "courses";
     }
@@ -104,6 +107,7 @@ public class GeneralController {
     @RequestMapping(value = "/aboutUs", method = RequestMethod.GET)
     public String Info(Model model) {
 
+        logVerify = false;
         model.addAttribute("account", loggedUser);
         return "aboutUs";
     }

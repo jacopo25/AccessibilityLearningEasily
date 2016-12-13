@@ -21,8 +21,11 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
+                 <spring:url value="/profilePage" var="profile"/>
+                <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
+
                 <spring:url value="/courses" var="coursesList"/>
-                <a href="${coursesList}" class = "thisBigLinkHeader">Courses List</a>
+                <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
 
                 <spring:url value="/aboutUs" var="about"/>
                 <a href="${about}" class = "bigLinkHeader">About Us</a>

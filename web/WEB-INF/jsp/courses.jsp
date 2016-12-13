@@ -16,11 +16,12 @@
     <div class="innertubeHeader">
         <h1 id="homepage">LEARNING EASILY</h1>
         <div class="usefulLink">
-            <spring:url value="/courses" var="course"/>
-            <a href = "${course}" class = "bigLinkHeader">Courses list</a>
 
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class = "thisBigLinkHeader">Profile page</a>
+            <a href="${profile}" class = "bigLinkHeader">Profile page</a>
+
+            <spring:url value="/courses" var="course"/>
+            <a href = "${course}" class = "thisBigLinkHeader">Courses list</a>
 
             <spring:url value="/aboutUs" var="about"/>
             <a href="${about}" class = "bigLinkHeader">About Us</a>
