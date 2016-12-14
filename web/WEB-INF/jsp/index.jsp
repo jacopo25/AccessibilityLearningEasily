@@ -38,14 +38,12 @@
 
       <spring:url value="/registration" var="Registration"></spring:url>
                 <a href="${Registration}" id="linkReg" >Register</a>
-
-
     </div>
 
     <div class="w3-center">
       <h1 class="h1">LEARNING EASILY</h1>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
-      <p class="w3-center" style="font-size: 36px; color: white;">Learn like it's a game! A very easy way to learn things</p>
+      <h2 class="w3-center" style="font-size: 36px; color: white;">Learn like it's a game! A very easy way to learn things</h2>
 
             <spring:url value="/login" var="Login"></spring:url>
             <a href="${Login}" id="button_login" >Login</a><br>

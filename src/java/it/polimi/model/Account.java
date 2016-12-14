@@ -25,7 +25,7 @@ public class Account implements Serializable {
 
     private String surname;
     @NotNull
-    @NotBlank(message = "{NotBlank.Account.nickname}")
+    @NotBlank(message = "Nickname field must not be blank")
     private String nickname;
     @NotNull
     @NotBlank(message = "Password field must not be blank")

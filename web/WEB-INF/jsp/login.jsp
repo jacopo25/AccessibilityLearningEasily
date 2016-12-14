@@ -65,7 +65,7 @@
                 <label for="password" style="color: white">Password</label>
                     <form:input path ="password" type="password" id="password"
                                 name="${status.expression}" value="${status.value}"/>
-                    <form:errors path="password" />
+                    <form:errors path="password"/>
                 <!--</div>-->
                 <br>
             </spring:bind>

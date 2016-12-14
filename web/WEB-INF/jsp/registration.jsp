@@ -87,7 +87,7 @@
                 </spring:bind>
 
                 <spring:bind path="account.password">
-                    <label for="password" style="color: white">        Password</label>
+                    <label for="password" style="color: white">Password</label>
                     <input type="password" id="password"
                            name="${status.expression}" value="${status.value}"><br>
                 </spring:bind>
@@ -102,7 +102,7 @@
                            name="${status.expression}" value="${account.confirmReg}">
                 </spring:bind>
 
-                <button type="submit" id="submit" disabled="true">Register</button>
+                <button type="submit" id="submit" disabled="true" aria-hidden="true">Register</button>
 
             </div>
         </div>
@@ -113,13 +113,32 @@
 
 <script type="text/javascript">
 
-    $("#password, #confirm_password").on("keyup", function () {
-        if ($("#password").val() == $("#confirm_password").val()) {
+    $("#password, #confirm_password, #nickname, #mail, #age, #surname, #name").on("keyup", function () {
+
+        if($("#password").val() == "" || $("#confirm_password").val() == "") {
+            $("#message").html("");
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit")['aria-hidden'] = true;
+        }
+
+        if ($("#password").val() == $("#confirm_password").val() && $("#password").val() != "" && $("#confirm_password").val() != ""){
             $("#message").html("PASSWORD MATCHING").css("color", "CHARTREUSE");
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit")['aria-hidden'] = true;
+        }
+        if($("#password").val() != $("#confirm_password").val() && $("#password").val() != "" && $("#confirm_password").val() != "") {
+            $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW")
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit")['aria-hidden'] = true;
+        }
+
+        if($($("#password").val() == $("#confirm_password").val() && "#nickname").val() != "" && $("#mail").val() != "" && $("#age").val() != "" && $("#surname").val() != "" && $("#name").val() != "" && $("#password").val() != "" && $("#confirm_password").val() != ""){
             document.getElementById("submit").disabled = false;
-        } else
-            $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW");
+            document.getElementById("submit")['aria-hidden'] = false;
+
+        }
     });
+
 
 </script>
 
