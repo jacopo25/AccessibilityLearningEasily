@@ -98,7 +98,6 @@ nav ul a {
     text-align: left;
 }
 
-
 #footerText {
     color: #ffffff;
     text-align: center;
@@ -181,26 +180,163 @@ nav ul a {
     position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;
 }
 
-/* STILE FOR THE PAGE xxx */
+/* GENERAL STILE FOR THE PAGE OF THE COURSES */
 
 .containerAll{
     display: table;
 }
 
-.containerCourses{
+.containerCoursesTop{
+    display: inline;
+
+}
+
+.containerCoursesDown{
     display: inline;
 }
 
-.buttonProva{
+.containerSingleCourse{
+    display: inline-block;
+}
+
+.containerSingleCourseRight {
+    margin-left: 40px;
+}
+
+.containerSingleCourseDown{
+    margin-top: 25px;
+}
+
+.buttonCourses{
+    display: block;
     font-family: Arial;
     color: #ffffff;
-    font-size: 20px;
-    background: #3498db;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 60px;
+    text-decoration: none;
+    height: 300px;
+    width: 400px;
+}
+
+.buttonUpcoming{
+    background-image: url("../images/comingSoon.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+/* STYLE FOR THE PAGE courses.jsp */
+
+.buttonHistory{
+    background-image: url("../images/historyCourse.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonHistory:hover {
+    background-image: url("../images/historyCourseGoTo.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
     text-decoration: none;
 }
 
-.buttonProva:hover {
-    background: #3cb0fd;
+.buttonMath{
+    background-image: url("../images/mathCourse.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonMath:hover {
+    background-image: url("../images/mathCourseGoTo.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+/* STYLE FOR THE PAGE historyCourse.jsp */
+
+.buttonFrenchRevolution{
+    background-image: url("../images/frenchRevolutionText.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonFrenchRevolution:hover {
+    background-image: url("../images/frenchRevolutionTextGoTo.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+.buttonFirstWW{
+    background-image: url("../images/firstWWText.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonFirstWW:hover {
+    background-image: url("../images/firstWWTextGoTo.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+.buttonSecondWW{
+    background-image: url("../images/secondWWText.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonSecondWW:hover {
+    background-image: url("../images/secondWWTextGoTo.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+/* STYLE FOR THE PAGE mathCourse.jsp */
+
+.buttonEquations{
+    background-image: url("../images/equations.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonEquations:hover {
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+.buttonInequalities{
+    background-image: url("../images/inequalities.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonInequalities:hover {
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
+    text-decoration: none;
+}
+
+.buttonQuadraticEquations{
+    background-image: url("../images/quadraticEquations.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.buttonQuadraticEquations:hover {
+    opacity: 0.7;
+    -webkit-transition: opacity 1s linear;
     text-decoration: none;
 }

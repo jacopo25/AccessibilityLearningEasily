@@ -38,21 +38,32 @@
         <div id="content">
             <div class="innertube">
                 <div class ="containerIntro">
-                    <h1>List of all courses of Learning EasilyHi ${Account.nickname} of age ${Account.age}</h1>
+                    <h1>List of all courses of Learning Easily</h1>
                     <!-- Description of the page content -->
                     <p>Here you can see all the available courses and the upcoming ones!</p>
                 </div>
                 <div class ="containerAll">
-                    <div class="containerCourses">
+                    <div class="containerCoursesTop">
                         <div class="containerSingleCourse">
-                            <button class="buttonProva"> PROVA A CLICCARE </button>
-                            <button class="buttonProva"> PROVA A CLICCARE PER DUE </button>
+                            <h2> History Course </h2>
+                            <spring:url value="/historyCourse" var="historyC"></spring:url>
+                            <a href="${historyC}" class="buttonCourses buttonHistory" ></a>
+                        </div>
+                        <div class="containerSingleCourse containerSingleCourseRight">
+                            <h2> Math Course </h2>
+                            <spring:url value="/mathCourse" var="mathC"></spring:url>
+                            <a href="${mathC}" class="buttonCourses buttonMath" ></a>
                         </div>
                     </div>
 
-                    <div class="containerCourses">
-                        <div class="containerSingleCourse">
-
+                    <div class="containerCoursesDown">
+                        <div class="containerSingleCourse containerSingleCourseDown">
+                            <h2> This course is not available yet! </h2>
+                            <a class="buttonCourses buttonUpcoming"></a>
+                        </div>
+                        <div class="containerSingleCourse containerSingleCourseDown containerSingleCourseRight">
+                            <h2> This course is not available yet! </h2>
+                            <a class="buttonCourses buttonUpcoming"></a>
                         </div>
                     </div>
 
@@ -67,7 +78,7 @@
             <br>
 
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class="thisBigLinkNav">My Profile Page</a>
+            <a href="${profile}" class="bigLinkNav">My Profile Page</a>
 
             <br>
             <br>

@@ -9,13 +9,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
-import java.sql.Timestamp;
 
 
 
@@ -97,11 +95,27 @@ public class GeneralController {
     }
 
     @RequestMapping(value = "/courses", method = RequestMethod.GET)
-    public String CoursesList(Model model) {
+    public String coursesList(Model model) {
 
         logVerify = false;
         model.addAttribute("account", loggedUser);
         return "courses";
+    }
+
+    @RequestMapping(value = "/historyCourse", method = RequestMethod.GET)
+    public String historyCourseLectureList(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyCourse";
+    }
+
+    @RequestMapping(value = "/mathCourse", method = RequestMethod.GET)
+    public String mathCourseLectureList(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "mathCourse";
     }
 
     @RequestMapping(value = "/aboutUs", method = RequestMethod.GET)

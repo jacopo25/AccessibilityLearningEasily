@@ -63,5 +63,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.hibernate:hibernate-validator:5.1.0.Final" level="project" />
   </component>
 </module>
