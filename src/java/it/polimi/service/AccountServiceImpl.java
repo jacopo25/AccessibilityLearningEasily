@@ -24,13 +24,15 @@ public class AccountServiceImpl implements AccountService {
     public boolean validatePassword(Account account){
 
         boolean result = false;
+        String passwordDatabase;
         String passwordInserted = account.getPassword();
 
         Account accountFromNickname = repo.retrieveAccountFromNickname(account.getNickname());
-        String passwordDatabase = accountFromNickname.getPassword();
-
-        if(passwordInserted.equals(passwordDatabase)){
-            result = true;
+        if(accountFromNickname != null) {
+            passwordDatabase = accountFromNickname.getPassword();
+            if (passwordInserted.equals(passwordDatabase)) {
+                result = true;
+            }
         }
 
         return result;

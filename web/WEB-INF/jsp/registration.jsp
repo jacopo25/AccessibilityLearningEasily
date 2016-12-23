@@ -41,7 +41,7 @@
     <div class="innertubeHeader">
         <div class="usefulLink">
             <spring:url value="/" var="index"></spring:url>
-            <a href="${index}" class = "thisBigLinkHeader">Back</a>
+            <a href="${index}" class = "thisBigLinkHeader">Homepage</a>
         </div>
     </div>
     </nav>
@@ -102,7 +102,7 @@
                            name="${status.expression}" value="${account.confirmReg}">
                 </spring:bind>
 
-                <button type="submit" id="submit" disabled="true" aria-hidden="true">Register</button>
+                <button type="submit" id="submit" disabled="true" >Register</button>
 
             </div>
         </div>
@@ -135,6 +135,7 @@
         if($($("#password").val() == $("#confirm_password").val() && "#nickname").val() != "" && $("#mail").val() != "" && $("#age").val() != "" && $("#surname").val() != "" && $("#name").val() != "" && $("#password").val() != "" && $("#confirm_password").val() != ""){
             document.getElementById("submit").disabled = false;
             document.getElementById("submit")['aria-hidden'] = false;
+            document.getElementById("submit")['aria-label'] = "Register";
 
         }
     });

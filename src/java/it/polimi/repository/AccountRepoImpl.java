@@ -23,13 +23,19 @@ public class AccountRepoImpl implements AccountRepo{
     @Override
     public Account retrieveAccountFromNickname(String nickname){
 
+        Account account;
+
         TypedQuery<Account> query = em.createQuery("SELECT a FROM Account a " +
                 "WHERE a.nickname = :nickname", Account.class);
         query.setParameter("nickname", nickname);
 
         List<Account> rl = query.getResultList();
 
-        Account account = rl.get(0);
+        if(rl.isEmpty())
+            account = null;
+        else
+            account = rl.get(0);
+
 
         return account;
 

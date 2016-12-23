@@ -43,13 +43,15 @@ public class GeneralController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginForm(@Valid @ModelAttribute("Account")Account account, BindingResult bindingResult, RedirectAttributes redirect){
+
+
+
         if(bindingResult.hasErrors()){
             return "/login";
             }
         else {
             if (!service.validatePassword(account)) {
-
-                return "redirect:/profilePage";
+                return "redirect:/login";
             } else {
                 account.setOid(service.retrieveAccountId(account));
                 redirect.addFlashAttribute("account", account);

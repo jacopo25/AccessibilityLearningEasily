@@ -37,7 +37,7 @@
     <div class="innertubeHeader">
         <div class="usefulLink">
             <spring:url value="/" var="index"/>
-            <a href="${index}" class = "thisBigLinkHeader">Back</a>
+            <a href="${index}" class = "thisBigLinkHeader">Homepage</a>
          </div>
     </div>
 
@@ -55,18 +55,18 @@
                     <label for="nickname" style="color: white">Nickname</label>
                     <form:input path ="nickname" type="text" id="nickname"
                                 name="${status.expression}" value="${status.value}"/>
-                    <form:errors path="nickname" />
+                    <form:errors path="nickname" style="color: white"/>
                 </div>
                 <br>
             </spring:bind>
 
             <spring:bind path="password">
-                <!--<div class="form-group ${status.error ? 'has-error' : ''}">-->
+                <div class="form-group ${status.error ? 'has-error' : ''}">
                 <label for="password" style="color: white">Password</label>
                     <form:input path ="password" type="password" id="password"
                                 name="${status.expression}" value="${status.value}"/>
-                    <form:errors path="password"/>
-                <!--</div>-->
+                    <form:errors path="password" style="color: white"/>
+                </div>
                 <br>
             </spring:bind>
 
@@ -83,6 +83,8 @@
         </div>
 
 </div>
+
+
 
 </body>
 </html>

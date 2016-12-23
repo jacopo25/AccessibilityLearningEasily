@@ -46,8 +46,7 @@ input {
     outline: none;
     padding: 0 0 0 0;
     font-style: italic;
-    display: inline-block;
-    margin-right: 200px;
+    margin-right: 0px;
 }
 
 .form input[type=password]
@@ -61,8 +60,7 @@ input {
     outline: none;
     padding: 0 0 0 0;
     font-style: italic;
-    display: inline-block;
-    margin-right: 200px;
+    margin-right: 0px;
 }
 
 .inputs{
@@ -72,7 +70,7 @@ input {
 
 label{
     display: inline-block;
-    width: 250px;
+    width: 100px;
     text-align: right;
 }
 
