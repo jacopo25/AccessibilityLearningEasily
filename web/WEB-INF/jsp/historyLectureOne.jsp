@@ -7,22 +7,21 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/css/generalStyle.css"
           type="text/css">
-    <title>Profile Page</title>
+    <title>Learning Easily - List of courses</title>
 </head>
 
 <body>
 <a href="#content" class="hidden">Skip to my Profile details</a>
 <header>
     <div class="innertubeHeader">
-        <!-- Website logo -->
         <h1 id="homepage">LEARNING EASILY</h1>
-        <!-- Header links. Navigational links -->
         <div class="usefulLink">
-            <spring:url value="/courses" var="course"/>
-            <a href = "${course}" class = "bigLinkHeader">Courses list</a>
 
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class = "thisBigLinkHeader">Profile page</a>
+            <a href="${profile}" class = "bigLinkHeader">Profile page</a>
+
+            <spring:url value="/courses" var="course"/>
+            <a href = "${course}" class = "thisBigLinkHeader">Courses list</a>
 
             <spring:url value="/aboutUs" var="about"/>
             <a href="${about}" class = "bigLinkHeader">About Us</a>
@@ -34,24 +33,40 @@
 </header>
 
 <div id="wrapper">
+
     <main>
         <div id="content">
             <div class="innertube">
-                <!-- Title of the page -->
-                <h1>The French Revolution</h1>
-                <!-- Description of the page content -->
-                <p>In this page you will learn what happens in the French Revolutions!</p>
-
-                <div>
-                    <h2>Profile data</h2>
-                    <p><strong>Name:</strong> ${account.name} </p>
-                    <p><strong>Surname: </strong> ${account.surname} </p>
-                    <p><strong>Nickname: </strong> ${account.nickname} </p>
-                    <p><strong>Age: </strong> ${account.age} </p>
+                <div class ="containerIntro">
+                    <h1>History Course - Lecture One</h1>
+                    <!-- Description of the page content -->
+                    <h2>The French Revolution</h2>
                 </div>
+                <div class ="containerAll">
+                    <div class="containerCoursesTop">
+                        <div class="containerSingleCourse">
+                            <h2> History Course </h2>
+                            <spring:url value="/historyCourse" var="historyC"></spring:url>
+                            <a href="${historyC}" class="buttonCourses buttonHistory" ></a>
+                        </div>
+                        <div class="containerSingleCourse containerSingleCourseRight">
+                            <h2> Math Course </h2>
+                            <spring:url value="/mathCourse" var="mathC"></spring:url>
+                            <a href="${mathC}" class="buttonCourses buttonMath" ></a>
+                        </div>
+                    </div>
 
-                <div>
-                    <h2>Lectures completed</h2>
+                    <div class="containerCoursesDown">
+                        <div class="containerSingleCourse containerSingleCourseDown">
+                            <h2> This course is not available yet! </h2>
+                            <a class="buttonCourses buttonUpcoming"></a>
+                        </div>
+                        <div class="containerSingleCourse containerSingleCourseDown containerSingleCourseRight">
+                            <h2> This course is not available yet! </h2>
+                            <a class="buttonCourses buttonUpcoming"></a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -61,17 +76,20 @@
         <div class="innertubeNav">
             <br>
             <br>
+
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class="thisBigLinkNav">My Profile Page</a>
+            <a href="${profile}" class="bigLinkNav">My Profile Page</a>
+
             <br>
             <br>
             <br>
+
             <spring:url value="/historyCourse" var="historyCourse"/>
             <a href="${historyCourse}" class ="bigLinkNav">History Overview</a>
             <ul>
                 <li>
                     <spring:url value="/historyLectureOne" var="historyLecture1"/>
-                    <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - French Revolution</a>
+                    <a href="${historyLecture1}" class = "thisSmallLinkNav">Lecture 1 - French Revolution</a>
                 </li>
                 <li>
                     <spring:url value="/historyLectureTwo" var="historyLecture2"/>
@@ -82,8 +100,10 @@
                     <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Second World War</a>
                 </li>
             </ul>
+
             <br>
             <br>
+
             <spring:url value="/mathCourse" var="mathCourse"/>
             <a href="${mathCourse}" class="bigLinkNav">Math Overview</a>
             <ul>
