@@ -1,3 +1,18 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: rezzo
+  Date: 18/01/2017
+  Time: 22:36
+  To change this template use File | Settings | File Templates.
+--%>
+
+<%--
+  Created by IntelliJ IDEA.
+  User: rezzo
+  Date: 16/01/2017
+  Time: 22:25
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -9,7 +24,7 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/css/generalStyle.css"
           type="text/css">
-    <title>Profile Page</title>
+    <title>Answer Page</title>
 </head>
 
 <body>
@@ -21,17 +36,17 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
-                 <spring:url value="/profilePage" var="profile"/>
-                <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
+            <spring:url value="/profilePage" var="profile"/>
+            <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
 
-                <spring:url value="/courses" var="coursesList"/>
-                <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
+            <spring:url value="/courses" var="coursesList"/>
+            <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
 
-                <spring:url value="/aboutUs" var="about"/>
-                <a href="${about}" class = "bigLinkHeader">About Us</a>
+            <spring:url value="/aboutUs" var="about"/>
+            <a href="${about}" class = "bigLinkHeader">About Us</a>
 
-                <spring:url value="/" var="logout"/>
-                <a href="${logout}" class = "bigLinkHeader">Logout</a>
+            <spring:url value="/" var="logout"/>
+            <a href="${logout}" class = "bigLinkHeader">Logout</a>
         </div>
     </div>
 </header>
@@ -40,28 +55,32 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <!-- Title of the page -->
-                <h1>Hi ${account.nickname} This is your profile page: </h1>
-                <!-- Description of the page content -->
-                <p>Here you can see your profile data, the lectures that you have completed and the badges that you have earned!</p>
-
-                <div>
-                    <h2>Profile data</h2>
-                    <p><strong>Name:</strong> ${account.name} </p>
-                    <p><strong>Surname: </strong> ${account.surname} </p>
-                    <p><strong>Nickname: </strong> ${account.nickname} </p>
-                    <p><strong>Age: </strong> ${account.age} </p>
-                </div>
-
-
-                <div>
-                    <h2>Lectures completed</h2>
-                </div>
+                <form action="">
+                    <fieldset>
+                        <legend>Question 1</legend>
+                        Answer 1 <input type="radio"  value="Answer 1"/>
+                        Answer 2 <input type="radio"  value="Answer 2"/>
+                        Answer 3 <input type="radio"  value="Answer 3"/>
+                        <legend>Question 2</legend>
+                        Answer 4 <input type="radio"  value="Answer 4"/>
+                        Answer 5 <input type="radio"  value="Answer 5"/>
+                        Answer 6 <input type="radio"  value="Answer 6"/>
+                        <legend>Question 3</legend>
+                        Answer 7 <input type="radio"  value="Answer 7"/>
+                        Answer 8 <input type="radio"  value="Answer 8"/>
+                        Answer 9 <input type="radio"  value="Answer 9"/>
+                        <legend>Question 4</legend>
+                        Answer 10 <input type="radio"  value="Answer 10"/>
+                        Answer 11 <input type="radio"  value="Answer 11"/>
+                        Answer 12 <input type="radio"  value="Answer 12"/>
+                        <legend>Question 5</legend>
+                        Answer 13 <input type="radio"  value="Answer 13"/>
+                        Answer 14 <input type="radio"  value="Answer 14"/>
+                        Answer 15 <input type="radio"  value="Answer 15"/>
+                    </fieldset>
+                </form>
             </div>
-            <spring:url value="/answers" var="answers"/>
-            <a href="${answers}" >Answers</a>
-            <spring:url value="/questions" var="questions"/>
-            <a href="${questions}" >Questions</a>
+
         </div>
     </main>
 
@@ -119,6 +138,24 @@
         <p id="footerText">Learning Easily - Project for: Accessibility. AA 2015/2016 - Authors: Magni Jacopo and Rezzonico Davide</p>
     </div>
 </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Questions</title>
+</head>
+<body>
+
+
 
 </body>
 </html>

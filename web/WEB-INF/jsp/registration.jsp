@@ -94,7 +94,7 @@
 
                 <label for="confirm_password" style="color: white">Confirm Password</label>
                 <input type="password" id="confirm_password">
-                <div id='message'></div>
+                <div id='message' aria-live="polite"></div>
                 <br>
 
                 <spring:bind path="account.confirmReg">
@@ -113,6 +113,8 @@
 
 <script type="text/javascript">
 
+
+
     $("#password, #confirm_password, #nickname, #mail, #age, #surname, #name").on("keyup", function () {
 
         if($("#password").val() == "" || $("#confirm_password").val() == "") {
@@ -123,11 +125,13 @@
 
         if ($("#password").val() == $("#confirm_password").val() && $("#password").val() != "" && $("#confirm_password").val() != ""){
             $("#message").html("PASSWORD MATCHING").css("color", "CHARTREUSE");
+            document.getElementById("message").setAttribute("role", "alert");
             document.getElementById("submit").disabled = true;
             document.getElementById("submit")['aria-hidden'] = true;
         }
         if($("#password").val() != $("#confirm_password").val() && $("#password").val() != "" && $("#confirm_password").val() != "") {
-            $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW")
+            $("#message").html("PASSWORD NOT MATCHING").css("color", "YELLOW");
+            document.getElementById("message").setAttribute("role", "alert");
             document.getElementById("submit").disabled = true;
             document.getElementById("submit")['aria-hidden'] = true;
         }
@@ -138,6 +142,7 @@
             document.getElementById("submit")['aria-label'] = "Register";
 
         }
+        document.getElementById("message").setAttribute("role", "");
     });
 
 
@@ -149,7 +154,7 @@
     $( "#regForm" ).submit(function( event ) {
 
         w2popup.open({
-            body: '<div class="w2ui-centered">Congratulation!!!Your registration has succeeded</div>',
+            body: '<div class="w2ui-centered" role="alert">Congratulation!!!Your registration has succeeded</div>',
             buttons: '<button  type="button">'+
                      '<spring:url value="/login" var="confReg"/>'+
                      '<a href="${confReg}" style=" font-size: 15px">Go to log in</a></button>'

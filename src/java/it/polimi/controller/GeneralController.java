@@ -36,13 +36,14 @@ public class GeneralController {
         //System.out.println("Tempo quando sono in login "+timestamp);
         //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
         logVerify = true;
-        model.addAttribute("Account",new Account());
+        Account account = new Account();
+        model.addAttribute("Account", account);
 
         return "/login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginForm(@Valid @ModelAttribute("Account")Account account, BindingResult bindingResult, RedirectAttributes redirect){
+    public String loginForm(Model model, @Valid @ModelAttribute("Account")Account account, BindingResult bindingResult, RedirectAttributes redirect){
 
 
 
@@ -50,7 +51,7 @@ public class GeneralController {
             return "/login";
             }
         else {
-            if (!service.validatePassword(account)) {
+            if (!service.validatePassword(account)){
                 return "redirect:/login";
             } else {
                 account.setOid(service.retrieveAccountId(account));
@@ -72,10 +73,6 @@ public class GeneralController {
 
 
         service.createAccount(account);
-        //account.setConfirmReg(true);
-        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        //System.out.println("Tempo quando clicco registrati "+timestamp);
-        //System.out.println("Conferma registrazione quando clicco registrati "+account.getConfirmReg());
         redirect.addFlashAttribute("Account", account);
 
         return "redirect:/login";
@@ -128,5 +125,68 @@ public class GeneralController {
         return "aboutUs";
     }
 
+    @RequestMapping(value = "/historyLectureOne", method = RequestMethod.GET)
+    public String HistoryLecture1(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureOne";
+    }
+
+    @RequestMapping(value = "/historyLectureTwo", method = RequestMethod.GET)
+    public String HistoryLecture2(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureTwo";
+    }
+
+    @RequestMapping(value = "/historyLectureThree", method = RequestMethod.GET)
+    public String HistoryLecture3(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureThree";
+    }
+
+    @RequestMapping(value = "/historyLectureOneQuestions", method = RequestMethod.GET)
+    public String HistoryLecture1Q(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureOneQuestions";
+    }
+
+    @RequestMapping(value = "/historyLectureTwoQuestions", method = RequestMethod.GET)
+    public String HistoryLecture2Q(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureTwoQuestions";
+    }
+
+    @RequestMapping(value = "/historyLectureThreeQuestions", method = RequestMethod.GET)
+    public String HistoryLecture3Q(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "historyLectureThreeQuestions";
+    }
+
+    @RequestMapping(value = "/answers", method = RequestMethod.GET)
+    public String answers(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "answers";
+    }
+
+    @RequestMapping(value = "/questions", method = RequestMethod.GET)
+    public String questions(Model model) {
+
+        logVerify = false;
+        model.addAttribute("account", loggedUser);
+        return "questions";
+    }
 
 }

@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: rezzo
+  Date: 16/01/2017
+  Time: 22:25
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
@@ -9,7 +16,7 @@
     <link rel="stylesheet"
           href="${pageContext.request.contextPath}/resources/css/generalStyle.css"
           type="text/css">
-    <title>Profile Page</title>
+    <title>Answer Page</title>
 </head>
 
 <body>
@@ -21,17 +28,17 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
-                 <spring:url value="/profilePage" var="profile"/>
-                <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
+            <spring:url value="/profilePage" var="profile"/>
+            <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
 
-                <spring:url value="/courses" var="coursesList"/>
-                <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
+            <spring:url value="/courses" var="coursesList"/>
+            <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
 
-                <spring:url value="/aboutUs" var="about"/>
-                <a href="${about}" class = "bigLinkHeader">About Us</a>
+            <spring:url value="/aboutUs" var="about"/>
+            <a href="${about}" class = "bigLinkHeader">About Us</a>
 
-                <spring:url value="/" var="logout"/>
-                <a href="${logout}" class = "bigLinkHeader">Logout</a>
+            <spring:url value="/" var="logout"/>
+            <a href="${logout}" class = "bigLinkHeader">Logout</a>
         </div>
     </div>
 </header>
@@ -40,28 +47,48 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <!-- Title of the page -->
-                <h1>Hi ${account.nickname} This is your profile page: </h1>
-                <!-- Description of the page content -->
-                <p>Here you can see your profile data, the lectures that you have completed and the badges that you have earned!</p>
+                <table cellspacing="10">
+                    <tr><th colspan="2">Answers</th></tr>
 
-                <div>
-                    <h2>Profile data</h2>
-                    <p><strong>Name:</strong> ${account.name} </p>
-                    <p><strong>Surname: </strong> ${account.surname} </p>
-                    <p><strong>Nickname: </strong> ${account.nickname} </p>
-                    <p><strong>Age: </strong> ${account.age} </p>
-                </div>
-
-
-                <div>
-                    <h2>Lectures completed</h2>
-                </div>
+                    <tr>
+                        <td></td>
+                        <td valign="middle" align="center">User answer</td>
+                        <td valign="middle" align="center">Correct answer</td>
+                        <td valign="middle" align="center">Tip</td>
+                    </tr>
+                    <tr>
+                        <td>Question 1</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                    </tr>
+                    <tr>
+                        <td>Question 2</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                    </tr>
+                    <tr>
+                        <td>Question 3</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                    </tr>
+                    <tr>
+                        <td>Question 4</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                    </tr>
+                    <tr>
+                        <td>Question 5</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">Ciao</td>
+                    </tr>
+                </table>
             </div>
-            <spring:url value="/answers" var="answers"/>
-            <a href="${answers}" >Answers</a>
-            <spring:url value="/questions" var="questions"/>
-            <a href="${questions}" >Questions</a>
+
         </div>
     </main>
 
@@ -122,3 +149,8 @@
 
 </body>
 </html>
+
+
+
+
+
