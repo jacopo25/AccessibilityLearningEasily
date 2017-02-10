@@ -24,7 +24,7 @@ public class LectureRepoImpl implements LectureRepo {
     public List<Lecture> retrieveLecture(int lectureID){
 
         TypedQuery<Lecture> query = em.createQuery("SELECT lecture FROM Lecture lecture " +
-                "WHERE lecture.lecture_ID = :lectureID", Lecture.class);
+                "WHERE lecture.lecture_id = :lectureID", Lecture.class);
         query.setParameter("lectureID", lectureID);
 
         List<Lecture> rl = query.getResultList();

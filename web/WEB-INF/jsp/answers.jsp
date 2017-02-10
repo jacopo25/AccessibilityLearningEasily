@@ -58,33 +58,33 @@
                     </tr>
                     <tr>
                         <td>Question 1</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">${answers.filteredAnswers.get(0)}</td>
+                        <td valign="middle" align="center">${answers.correctAnswer1}</td>
+                        <td valign="middle" align="center">${answers.tips[0]}</td>
                     </tr>
                     <tr>
                         <td>Question 2</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">${answers.filteredAnswers.get(1)}</td>
+                        <td valign="middle" align="center">${answers.correctAnswer2}</td>
+                        <td valign="middle" align="center">${answers.tips[1]}</td>
                     </tr>
                     <tr>
                         <td>Question 3</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">${answers.filteredAnswers.get(2)}</td>
+                        <td valign="middle" align="center">${answers.correctAnswer3}</td>
+                        <td valign="middle" align="center">${answers.tips[2]}</td>
                     </tr>
                     <tr>
                         <td>Question 4</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">${answers.filteredAnswers.get(3)}</td>
+                        <td valign="middle" align="center">${answers.correctAnswer4}</td>
+                        <td valign="middle" align="center">${answers.tips[3]}</td>
                     </tr>
                     <tr>
                         <td>Question 5</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
-                        <td valign="middle" align="center">Ciao</td>
+                        <td valign="middle" align="center">${answers.filteredAnswers.get(4)}</td>
+                        <td valign="middle" align="center">${answers.correctAnswer5}</td>
+                        <td valign="middle" align="center">${answers.tips[4]}</td>
                     </tr>
                 </table>
             </div>
