@@ -47,8 +47,10 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <table cellspacing="10">
-                    <tr><th colspan="2">Answers</th></tr>
+                <table cellspacing="15">
+                    <tr>
+                        <th colspan="10" style="font-size: 8">Answers</th>
+                    </tr>
 
                     <tr>
                         <td></td>
@@ -58,33 +60,27 @@
                     </tr>
                     <tr>
                         <td>Question 1</td>
-                        <td valign="middle" align="center">${answers.filteredAnswers.get(0)}</td>
-                        <td valign="middle" align="center">${answers.correctAnswer1}</td>
-                        <td valign="middle" align="center">${answers.tips[0]}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(0)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(0)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.tips[0]}</td>
                     </tr>
                     <tr>
                         <td>Question 2</td>
-                        <td valign="middle" align="center">${answers.filteredAnswers.get(1)}</td>
-                        <td valign="middle" align="center">${answers.correctAnswer2}</td>
-                        <td valign="middle" align="center">${answers.tips[1]}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(1)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(1)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.tips[1]}</td>
                     </tr>
                     <tr>
                         <td>Question 3</td>
-                        <td valign="middle" align="center">${answers.filteredAnswers.get(2)}</td>
-                        <td valign="middle" align="center">${answers.correctAnswer3}</td>
-                        <td valign="middle" align="center">${answers.tips[2]}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(2)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(2)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.tips[2]}</td>
                     </tr>
                     <tr>
                         <td>Question 4</td>
-                        <td valign="middle" align="center">${answers.filteredAnswers.get(3)}</td>
-                        <td valign="middle" align="center">${answers.correctAnswer4}</td>
-                        <td valign="middle" align="center">${answers.tips[3]}</td>
-                    </tr>
-                    <tr>
-                        <td>Question 5</td>
-                        <td valign="middle" align="center">${answers.filteredAnswers.get(4)}</td>
-                        <td valign="middle" align="center">${answers.correctAnswer5}</td>
-                        <td valign="middle" align="center">${answers.tips[4]}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(3)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(3)}</td>
+                        <td valign="middle" align="center">${supportClassAnswers.tips[3]}</td>
                     </tr>
                 </table>
             </div>
