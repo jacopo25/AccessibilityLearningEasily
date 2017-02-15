@@ -1,5 +1,7 @@
 package it.polimi.service;
 
+import it.polimi.model.Lecture;
+
 import java.util.ArrayList;
 
 /**
@@ -9,5 +11,6 @@ public interface LectureService {
 
     public ArrayList<Integer> computeLectureAnswers(int lectureID);
     public String retrieveLectureName(int lectureID);
+    public Lecture retrieveLectureInfo(String lectureName);
 
 }

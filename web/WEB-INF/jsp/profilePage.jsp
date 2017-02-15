@@ -58,10 +58,6 @@
                     <h2>Lectures completed</h2>
                 </div>
             </div>
-            <spring:url value="/supportClassAnswers" var="supportClassAnswers"/>
-            <a href="${supportClassAnswers}" >Answers</a>
-            <spring:url value="/questions" var="questions"/>
-            <a href="${questions}" >Questions</a>
         </div>
     </main>
 

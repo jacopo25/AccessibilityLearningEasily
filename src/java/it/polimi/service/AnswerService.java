@@ -13,4 +13,5 @@ public interface AnswerService {
     public List<Answers> retrieveAllAnswers(int lectureID);
     public void retrieveQuestions(int lectureID);
     public List<String> retrieveCorrectAnswers(List<Answers> answers);
+    public int retrieveLectureIDByAnsw(String answ);
 }

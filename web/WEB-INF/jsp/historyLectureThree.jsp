@@ -94,8 +94,17 @@
             </div>
 
             <div class="questionsLinkPage">
-                <spring:url value="/historyLectureThreeQuestions" var="questions"/>
-                <a href="${questions}">Go to the Questions</a>
+
+                <form method="post">
+
+                    <spring:bind path="lecture.lecture_name">
+                        <input type="hidden"
+                               name="${status.expression}" value="The Second World War">
+                    </spring:bind>
+
+                    <input type="submit" value="Go to the Questions">
+                </form>
+
             </div>
 
         </div>

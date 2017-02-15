@@ -45,4 +45,13 @@ public class AnswerServiceImpl implements AnswerService {
         return correctAnswers;
     }
 
+    @Override
+    public int retrieveLectureIDByAnsw(String answ){
+        int lectureID;
+        List<Answers> answers;
+        answers = repo.retrieveLectureIDByAnsw(answ);
+        lectureID = answers.get(0).getLecture_id();
+        return lectureID;
+    }
+
 }

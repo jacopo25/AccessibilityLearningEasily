@@ -31,4 +31,18 @@ public class AnswerRepoImpl implements AnswerRepo {
 
         return rl;
     }
+
+    @Override
+    public List<Answers> retrieveLectureIDByAnsw(String answ){
+
+        TypedQuery<Answers> query = em.createQuery("SELECT answers FROM Answers answers " +
+                "WHERE answers.answ1 = :answ " +
+                "OR answers.answ2 = :answ OR answers.answ3 = :answ OR answers.answ4 = :answ", Answers.class);
+
+        query.setParameter("answ", answ);
+
+        List<Answers> rl = query.getResultList();
+
+        return rl;
+    }
 }

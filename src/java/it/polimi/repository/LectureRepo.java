@@ -10,5 +10,7 @@ import java.util.List;
 public interface LectureRepo {
 
     public List<Lecture> retrieveLecture(int lectureID);
+    public Lecture retrieveLectureInfo(String lectureName);
+
 
 }

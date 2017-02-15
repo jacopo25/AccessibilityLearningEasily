@@ -57,4 +57,13 @@ public class LectureServiceImpl implements LectureService {
         return lectureName;
     }
 
+    @Override
+    public Lecture retrieveLectureInfo(String lectureName){
+
+        Lecture requiredLecture = new Lecture();
+        requiredLecture = repo.retrieveLectureInfo(lectureName);
+
+        return requiredLecture;
+    }
+
 }

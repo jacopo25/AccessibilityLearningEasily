@@ -4,6 +4,7 @@ package it.polimi.controller;
 
 import it.polimi.model.Account;
 import it.polimi.model.Answers;
+import it.polimi.model.Lecture;
 import it.polimi.model.SupportClassAnswers;
 import it.polimi.service.AccountService;
 import it.polimi.service.AnswerService;
@@ -138,59 +139,69 @@ public class GeneralController {
     @RequestMapping(value = "/historyLectureOne", method = RequestMethod.GET)
     public String HistoryLecture1(Model model) {
 
+        Lecture lecture = new Lecture();
+
         logVerify = false;
         model.addAttribute("account", loggedUser);
+        model.addAttribute("lecture", lecture);
         return "historyLectureOne";
+    }
+
+    @RequestMapping(value = "/historyLectureOne", method = RequestMethod.POST)
+    public String SendHistoryLectureOneTitle(RedirectAttributes redirect,
+                                           @ModelAttribute("lecture")Lecture lecture){
+
+        redirect.addFlashAttribute("lecture",lecture);
+        return "redirect:/questions";
     }
 
     @RequestMapping(value = "/historyLectureTwo", method = RequestMethod.GET)
     public String HistoryLecture2(Model model) {
 
+        Lecture lecture = new Lecture();
+
         logVerify = false;
         model.addAttribute("account", loggedUser);
+        model.addAttribute("lecture", lecture);
         return "historyLectureTwo";
+    }
+
+    @RequestMapping(value = "/historyLectureTwo", method = RequestMethod.POST)
+    public String SendHistoryLectureTwoTitle(RedirectAttributes redirect,
+                                             @ModelAttribute("lecture")Lecture lecture){
+
+        redirect.addFlashAttribute("lecture",lecture);
+        return "redirect:/questions";
     }
 
     @RequestMapping(value = "/historyLectureThree", method = RequestMethod.GET)
     public String HistoryLecture3(Model model) {
 
+        Lecture lecture = new Lecture();
+
         logVerify = false;
         model.addAttribute("account", loggedUser);
+        model.addAttribute("lecture", lecture);
         return "historyLectureThree";
     }
 
-    @RequestMapping(value = "/historyLectureOneQuestions", method = RequestMethod.GET)
-    public String HistoryLecture1Q(Model model) {
+    @RequestMapping(value = "/historyLectureThree", method = RequestMethod.POST)
+    public String SendHistoryLectureThreeTitle(RedirectAttributes redirect,
+                                             @ModelAttribute("lecture")Lecture lecture){
 
-        logVerify = false;
-        model.addAttribute("account", loggedUser);
-        return "historyLectureOneQuestions";
-    }
-
-    @RequestMapping(value = "/historyLectureTwoQuestions", method = RequestMethod.GET)
-    public String HistoryLecture2Q(Model model) {
-
-        logVerify = false;
-        model.addAttribute("account", loggedUser);
-        return "historyLectureTwoQuestions";
-    }
-
-    @RequestMapping(value = "/historyLectureThreeQuestions", method = RequestMethod.GET)
-    public String HistoryLecture3Q(Model model) {
-
-        logVerify = false;
-        model.addAttribute("account", loggedUser);
-        return "historyLectureThreeQuestions";
+        redirect.addFlashAttribute("lecture",lecture);
+        return "redirect:/questions";
     }
 
     @RequestMapping(value = "/answers", method = RequestMethod.GET)
-    public String answers(Model model,@ModelAttribute("supportClassAnswers")SupportClassAnswers supportClassAnswers) {
+    public String answers(Model model,@ModelAttribute("lecture")Lecture lecture,
+                          @ModelAttribute("supportClassAnswers")SupportClassAnswers supportClassAnswers) {
 
         logVerify = false;
         model.addAttribute("account", loggedUser);
-        //correctIntAnswers = LectureService.computeLectureAnswers(2);
 
-        correctStringAnswers = AnswerService.retrieveCorrectAnswers(AnswerService.retrieveAllAnswers(2));
+        int lectureID = AnswerService.retrieveLectureIDByAnsw(supportClassAnswers.getUserAnswers().get(0));
+        correctStringAnswers = AnswerService.retrieveCorrectAnswers(AnswerService.retrieveAllAnswers(lectureID));
 
 
         for (int i = 0; i < 4; i++) {
@@ -206,24 +217,28 @@ public class GeneralController {
     }
 
     @RequestMapping(value = "/questions", method = RequestMethod.GET)
-    public String questions(Model model) {
+    public String questions(Model model,@ModelAttribute("lecture")Lecture lecture) {
 
         SupportClassAnswers supportClassAnswers = new SupportClassAnswers();
-        supportClassAnswers.setAnswers(AnswerService.retrieveAllAnswers(2));
+        lecture = LectureService.retrieveLectureInfo(lecture.getLecture_name());
+        supportClassAnswers.setAnswers(AnswerService.retrieveAllAnswers(lecture.getLecture_ID()));
 
 
         logVerify = false;
         model.addAttribute("account", loggedUser);
         model.addAttribute("supportClassAnswers", supportClassAnswers);
+        model.addAttribute("lecture",lecture);
 
         return "/questions";
     }
 
     @RequestMapping(value = "/questions", method = RequestMethod.POST)
     public String QuestionForm(@ModelAttribute("supportClassAnswers")SupportClassAnswers supportClassAnswers,
+                               @ModelAttribute("lecture")Lecture lecture,
                                RedirectAttributes redirect){
 
         redirect.addFlashAttribute("supportClassAnswers", supportClassAnswers);
+        redirect.addFlashAttribute("lecture",lecture);
         return "redirect:/answers";
 
     }

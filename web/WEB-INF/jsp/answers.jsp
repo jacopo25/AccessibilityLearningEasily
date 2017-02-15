@@ -47,40 +47,42 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <table cellspacing="15">
+                <h2>Results</h2>
+                <p> In this page there are the results of your test! Check out the answers and to which one you have answered correctly! </p>
+                <table cellspacing="5" style="border: 1px solid black; border-collapse: collapse; width:100%; margin-top: 100px;">
                     <tr>
-                        <th colspan="10" style="font-size: 8">Answers</th>
+                        <th colspan="10" style="font-size: 20px; border: 1px solid black; border-collapse: collapse;">Answers</th>
                     </tr>
 
                     <tr>
                         <td></td>
-                        <td valign="middle" align="center">User answer</td>
-                        <td valign="middle" align="center">Correct answer</td>
-                        <td valign="middle" align="center">Tip</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">User answer</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">Correct answer</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">Tip</td>
                     </tr>
                     <tr>
-                        <td>Question 1</td>
-                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(0)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(0)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.tips[0]}</td>
+                        <td style="border: 1px solid black; border-collapse: collapse;">Question 1</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.userAnswers.get(0)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.correctAnswers.get(0)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.tips[0]}</td>
                     </tr>
                     <tr>
-                        <td>Question 2</td>
-                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(1)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(1)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.tips[1]}</td>
+                        <td style="border: 1px solid black; border-collapse: collapse;">Question 2</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.userAnswers.get(1)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.correctAnswers.get(1)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.tips[1]}</td>
                     </tr>
                     <tr>
-                        <td>Question 3</td>
-                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(2)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(2)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.tips[2]}</td>
+                        <td style="border: 1px solid black; border-collapse: collapse;">Question 3</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.userAnswers.get(2)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.correctAnswers.get(2)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;" >${supportClassAnswers.tips[2]}</td>
                     </tr>
                     <tr>
-                        <td>Question 4</td>
-                        <td valign="middle" align="center">${supportClassAnswers.userAnswers.get(3)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.correctAnswers.get(3)}</td>
-                        <td valign="middle" align="center">${supportClassAnswers.tips[3]}</td>
+                        <td style="border: 1px solid black; border-collapse: collapse;">Question 4</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.userAnswers.get(3)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.correctAnswers.get(3)}</td>
+                        <td valign="middle" align="center" style="border: 1px solid black; border-collapse: collapse;">${supportClassAnswers.tips[3]}</td>
                     </tr>
                 </table>
             </div>

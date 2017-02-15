@@ -32,6 +32,19 @@ public class LectureRepoImpl implements LectureRepo {
         return rl;
     }
 
+    @Override
+    public Lecture retrieveLectureInfo(String lectureName){
+        TypedQuery<Lecture> query = em.createQuery("SELECT lecture FROM Lecture lecture " +
+                "WHERE lecture.lecture_name = :lectureName", Lecture.class);
+        query.setParameter("lectureName", lectureName);
+
+        Lecture rl = query.getSingleResult();
+
+        return rl;
+    }
+
+
+
 
 
 }
