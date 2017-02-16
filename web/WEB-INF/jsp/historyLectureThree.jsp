@@ -38,7 +38,7 @@
         <div id="content">
             <div class="innertube">
                 <div class ="containerIntro">
-                    <h1>History Course - Lecture Two</h1>
+                    <h1>History Course - Lecture Three</h1>
                     <!-- Description of the page content -->
                     <h2>The Second World War WWII</h2>
                 </div>

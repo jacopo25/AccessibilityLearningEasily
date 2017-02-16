@@ -59,7 +59,7 @@
                         <div class="containerSingleCourse containerSingleCourseDown">
                             <h2> Second World War Lecture </h2>
                             <spring:url value="/historyLectureThree" var="l3"></spring:url>
-                            <a href="${l2}" class="buttonCourses buttonSecondWW"></a>
+                            <a href="${l3}" class="buttonCourses buttonSecondWW"></a>
                         </div>
                         <div class="containerSingleCourse containerSingleCourseDown containerSingleCourseRight">
                             <h2> This course is not available yet! </h2>
