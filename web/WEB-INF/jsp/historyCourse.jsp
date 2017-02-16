@@ -46,19 +46,20 @@
                     <div class="containerCoursesTop">
                         <div class="containerSingleCourse">
                             <h2> French Revolution Lecture </h2>
-                            <spring:url value="/profilePage" var="profile"></spring:url>
-                            <a href="${profile}" class="buttonCourses buttonFrenchRevolution" ></a>
+                            <spring:url value="/historyLectureOne" var="l1"></spring:url>
+                            <a href="${l1}" class="buttonCourses buttonFrenchRevolution" ></a>
                         </div>
                         <div class="containerSingleCourse containerSingleCourseRight">
                             <h2> First World War Lecture </h2>
-                            <spring:url value="/profilePage" var="profile"></spring:url>
-                            <a href="${profile}" class="buttonCourses buttonFirstWW" ></a>
+                            <spring:url value="/historyLectureTwo" var="l2"></spring:url>
+                            <a href="${l2}" class="buttonCourses buttonFirstWW" ></a>
                         </div>
                     </div>
                     <div class="containerCoursesDown">
                         <div class="containerSingleCourse containerSingleCourseDown">
                             <h2> Second World War Lecture </h2>
-                            <a class="buttonCourses buttonSecondWW"></a>
+                            <spring:url value="/historyLectureThree" var="l3"></spring:url>
+                            <a href="${l2}" class="buttonCourses buttonSecondWW"></a>
                         </div>
                         <div class="containerSingleCourse containerSingleCourseDown containerSingleCourseRight">
                             <h2> This course is not available yet! </h2>
@@ -107,16 +108,13 @@
             <a href="${mathCourse}" class="bigLinkNav">Math Overview</a>
             <ul>
                 <li>
-                    <spring:url value="/mathLectureOne" var="mathLecture1"/>
-                    <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - Equations</a>
+                    <a class = "smallLinkNav">Lecture 1 - Equations</a>
                 </li>
                 <li>
-                    <spring:url value="/mathLectureTwo" var="mathLecture2"/>
-                    <a href="${historyLecture2}" class = "smallLinkNav">Lecture 2 - Inequalities</a>
+                    <a class = "smallLinkNav">Lecture 2 - Inequalities</a>
                 </li>
                 <li>
-                    <spring:url value="/mathLectureThree" var="mathLecture3"/>
-                    <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Quadratic Equations</a>
+                    <a class = "smallLinkNav">Lecture 3 - Quadratic Equations</a>
                 </li>
             </ul>
         </div>

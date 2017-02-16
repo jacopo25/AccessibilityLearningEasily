@@ -35,6 +35,11 @@ input {
 
 }
 
+.aboutUsText{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
 .form input[type=text]
 {
     color: white;
@@ -175,6 +180,15 @@ label{
 .thisBigLinkHeader {
     text-decoration: none;
     font-size: 25px;
+    font-weight: bold;
+    color: #46AFFA;
+    margin-top: 50px;
+    padding-right: 15px;
+}
+
+.thisBigLinkHeaderHomepage {
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
     color: #46AFFA;
     margin-top: 50px;

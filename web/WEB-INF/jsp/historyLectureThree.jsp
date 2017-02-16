@@ -146,16 +146,13 @@
             <a href="${mathCourse}" class="bigLinkNav">Math Overview</a>
             <ul>
                 <li>
-                    <spring:url value="/mathLectureOne" var="mathLecture1"/>
-                    <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - Equations</a>
+                    <a class = "smallLinkNav">Lecture 1 - Equations</a>
                 </li>
                 <li>
-                    <spring:url value="/mathLectureTwo" var="mathLecture2"/>
-                    <a href="${historyLecture2}" class = "smallLinkNav">Lecture 2 - Inequalities</a>
+                    <a class = "smallLinkNav">Lecture 2 - Inequalities</a>
                 </li>
                 <li>
-                    <spring:url value="/mathLectureThree" var="mathLecture3"/>
-                    <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Quadratic Equations</a>
+                    <a class = "smallLinkNav">Lecture 3 - Quadratic Equations</a>
                 </li>
             </ul>
         </div>
