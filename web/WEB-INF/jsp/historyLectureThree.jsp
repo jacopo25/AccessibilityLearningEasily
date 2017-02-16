@@ -98,7 +98,7 @@
                 <form method="post">
 
                     <spring:bind path="lecture.lecture_name">
-                        <input type="hidden"
+                        <input type="hidden" class="linkQuestionButton"
                                name="${status.expression}" value="The Second World War">
                     </spring:bind>
 

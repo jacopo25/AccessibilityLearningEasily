@@ -31,7 +31,7 @@
         <div class="usefulLink">
 
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class = "thisBigLinkHeader">Profile Page</a>
+            <a href="${profile}" class = "bigLinkHeader">Profile Page</a>
 
             <spring:url value="/courses" var="coursesList"/>
             <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
@@ -75,7 +75,7 @@
             <br>
             <br>
             <spring:url value="/profilePage" var="profile"/>
-            <a href="${profile}" class="thisBigLinkNav">My Profile Page</a>
+            <a href="${profile}" class="bigLinkNav">My Profile Page</a>
             <br>
             <br>
             <br>
