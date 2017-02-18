@@ -7,7 +7,7 @@
   Time: 16:26
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +36,7 @@
 
     <div class="innertubeHeader">
         <div class="usefulLink">
-            <spring:url value="/" var="index"/>
+            <spring:url value="/" var="index"></spring:url>
             <a href="${index}" class = "thisBigLinkHeader">Homepage</a>
          </div>
     </div>
@@ -54,8 +54,8 @@
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <label for="nickname" style="color: white">Nickname</label>
                     <form:input path ="nickname" type="text" id="nickname"
-                                name="${status.expression}" value="${status.value}"/>
-                    <form:errors path="nickname" style="color: white"/>
+                                name="${status.expression}" value="${status.value}"></form:input>
+                    <form:errors path="nickname" style="color: white"></form:errors>
                 </div>
                 <br>
             </spring:bind>
@@ -64,8 +64,8 @@
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                 <label for="password" style="color: white">Password</label>
                     <form:input path ="password" type="password" id="password"
-                                name="${status.expression}" value="${status.value}"/>
-                    <form:errors path="password" style="color: white"/>
+                                name="${status.expression}" value="${status.value}"></form:input>
+                    <form:errors path="password" style="color: white"></form:errors>
                 </div>
                 <br>
             </spring:bind>
@@ -77,7 +77,7 @@
 
     </form:form>
 
-    <spring:url value="/registration" var="register"/>
+    <spring:url value="/registration" var="register"></spring:url>
     <a href="${register}" class = "SignUp">Sign Up</a>
 
         </div>

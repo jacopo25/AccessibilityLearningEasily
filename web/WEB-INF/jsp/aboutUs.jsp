@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -29,7 +30,7 @@
     <div class="bgimg">
         <div class="innertubeHeader">
         <div class="usefulLink">
-            <spring:url value="/" var="index"/>
+            <spring:url value="/" var="index"></spring:url>
             <a href="${index}" class = "thisBigLinkHeader">Homepage</a>
         </div>
     </div>

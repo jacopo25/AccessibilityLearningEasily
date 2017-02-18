@@ -28,16 +28,16 @@
         <!-- Header links. Navigational links -->
         <div class="usefulLink">
 
-            <spring:url value="/profilePage" var="profile"/>
+            <spring:url value="/profilePage" var="profile"></spring:url>
             <a href="${profile}" class = "bigLinkHeader">Profile Page</a>
 
-            <spring:url value="/courses" var="coursesList"/>
+            <spring:url value="/courses" var="coursesList"></spring:url>
             <a href="${coursesList}" class = "bigLinkHeader">Courses List</a>
 
-            <spring:url value="/aboutUs" var="about"/>
+            <spring:url value="/aboutUs" var="about"></spring:url>
             <a href="${about}" class = "bigLinkHeader">About Us</a>
 
-            <spring:url value="/" var="logout"/>
+            <spring:url value="/" var="logout"></spring:url>
             <a href="${logout}" class = "bigLinkHeader">Logout</a>
         </div>
     </div>
@@ -51,7 +51,7 @@
                 <p> In this page there are the results of your test! Check out the answers and to which one you have answered correctly! </p>
                 <table cellspacing="5" style="border: 1px solid black; border-collapse: collapse; width:100%; margin-top: 100px;">
                     <tr>
-                        <th colspan="10" style="font-size: 20px; border: 1px solid black; border-collapse: collapse;">Answers</th>
+                        <th colspan="4" style="font-size: 20px; border: 1px solid black; border-collapse: collapse;">Answers</th>
                     </tr>
 
                     <tr>
@@ -90,11 +90,11 @@
         <div class="containerCoursesTop">
             <div class="answersLink">
              <div class="containerSingleCourse">
-                 <spring:url value="/profilePage" var="profilePage"/>
+                 <spring:url value="/profilePage" var="profilePage"></spring:url>
                  <a href="${profilePage}" class="linkQuestionButton">Go to your Profile Page</a>
              </div>
             <div class="containerSingleCourse containerSingleCourseRight">
-                 <spring:url value="/courses" var="courses"/>
+                 <spring:url value="/courses" var="courses"></spring:url>
                  <a href="${courses}" class="linkQuestionButton">Go to Courses Page</a>
             </div>
             </div>
@@ -105,30 +105,30 @@
         <div class="innertubeNav">
             <br>
             <br>
-            <spring:url value="/profilePage" var="profile"/>
+            <spring:url value="/profilePage" var="profile"></spring:url>
             <a href="${profile}" class="bigLinkNav">My Profile Page</a>
             <br>
             <br>
             <br>
-            <spring:url value="/historyCourse" var="historyCourse"/>
+            <spring:url value="/historyCourse" var="historyCourse"></spring:url>
             <a href="${historyCourse}" class ="bigLinkNav">History Overview</a>
             <ul>
                 <li>
-                    <spring:url value="/historyLectureOne" var="historyLecture1"/>
+                    <spring:url value="/historyLectureOne" var="historyLecture1"></spring:url>
                     <a href="${historyLecture1}" class = "smallLinkNav">Lecture 1 - French Revolution</a>
                 </li>
                 <li>
-                    <spring:url value="/historyLectureTwo" var="historyLecture2"/>
+                    <spring:url value="/historyLectureTwo" var="historyLecture2"></spring:url>
                     <a href="${historyLecture2}" class = "smallLinkNav">Lecture 2 - First World War</a>
                 </li>
                 <li>
-                    <spring:url value="/historyLectureThree" var="historyLecture3"/>
+                    <spring:url value="/historyLectureThree" var="historyLecture3"></spring:url>
                     <a href="${historyLecture3}" class = "smallLinkNav">Lecture 3 - Second World War</a>
                 </li>
             </ul>
             <br>
             <br>
-            <spring:url value="/mathCourse" var="mathCourse"/>
+            <spring:url value="/mathCourse" var="mathCourse"></spring:url>
             <a href="${mathCourse}" class="bigLinkNav">Math Overview</a>
             <ul>
                 <li>

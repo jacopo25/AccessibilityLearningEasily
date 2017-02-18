@@ -43,9 +43,7 @@ public class GeneralController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String formLogin(Model model) {
-        //Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        //System.out.println("Tempo quando sono in login "+timestamp);
-        //System.out.println("Conferma registrazione quando sono in login "+account.getConfirmReg());
+
         logVerify = true;
         Account account = new Account();
         model.addAttribute("Account", account);

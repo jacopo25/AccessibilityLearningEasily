@@ -34,7 +34,6 @@
 </head>
 <body>
 
-
 <div class="bgimg">
 
     <nav>
@@ -102,7 +101,7 @@
                            name="${status.expression}" value="${account.confirmReg}">
                 </spring:bind>
 
-                <button type="submit" id="submit" disabled="true" >Register</button>
+                <button type="submit" id="submit" disabled="disabled" >Register</button>
 
             </div>
         </div>
@@ -154,10 +153,19 @@
     $( "#regForm" ).submit(function( event ) {
 
         w2popup.open({
-            body: '<div class="w2ui-centered" role="alert">Congratulation!!!Your registration has succeeded</div>',
-            buttons: '<button  type="button">'+
+            body: '<div class="w2ui-centered" role="alert">Congratulation!!!Your registration has succeeded. Press tab key to go to Login page</div>',
+            buttons: '<button  type="button" >'+
                      '<spring:url value="/login" var="confReg"/>'+
-                     '<a href="${confReg}" style=" font-size: 15px">Go to log in</a></button>'
+                     '<a href="${confReg}"  style=" font-size: 15px">Go to log in</a></button>'
+
+        });
+
+        w2popup.on('keydown', function(event) {
+
+            //if( event.keyCode == 13 ) {
+                window.location.assign("http://localhost:8080/login");
+            //}
+
         });
 
         event.preventDefault();

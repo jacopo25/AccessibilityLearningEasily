@@ -59,26 +59,26 @@
                 <p>World War I was fought between the Allied Powers and the Central Powers. The main members of the Triple Entente (also known as the Allied Powers) were France, Russia, and Britain. The United States also fought on the side of the Allies after 1917.</p>
                 <p> The main members of the Central Powers were Germany, Austria-Hungary, the Ottoman Empire, and Bulgaria. </p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
 
                 <img src="../resources/images/trench.jpeg" alt="Men in a trench, a depression in the ground used as shelter from artillery and firearms" style="width:304px;height:228px;">
                 <p> The majority of the fighting took place in Europe along two fronts: the western front and the eastern front. The western front was a long line of trenches that ran from the coast of Belgium to Switzerland. A lot of the fighting along this front took place in France and Belgium. </p>
                 <p> The eastern front was between Germany, Austria-Hungary, and Bulgaria on one side and Russia and Romania on the other.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
 
                 <p> Although there were a number of causes for the war, the assassination of Austrian Archduke Franz Ferdinand was the main catalyst for starting the war. After the assassination, Austria declared war on Serbia.</p>
                 <p> Then Russia prepared to defend its ally Serbia. Next, Germany declared war on Russia to protect Austria. This caused France to declare war on Germany to protect its ally Russia. </p>
                 <p> Germany invaded Belgium to get to France which caused Britain to declare war on Germany. This all happened in just a few days. </p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> A lot of the war was fought using trench warfare along the western front. The armies hardly moved at all. They just bombed and shot at each other from across the trenches.</p>
                 <p> Some of the major battles during the war included the First Battle of the Marne, Battle of the Somme, Battle of Tannenberg, Battle of Gallipoli, and the Battle of Verdun.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> The fighting ended on November 11, 1918 when a general armistice was agreed to by both sides. </p>
 

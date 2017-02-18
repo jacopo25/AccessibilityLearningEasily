@@ -59,14 +59,14 @@
                 <p> The major Allied Powers were Britain, France, Russia, China and the United States. </p>
                 <p> The major Axis Powers were Germany, ruled by the Furher Adolf Hitler, Italy, ruled by the Dux Benito Mussolini and Japan, ruled by a man named Hirohito.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
 
                 <p> Before World War 2 began, Germany was ruled by a man named Adolf Hitler, together with the Nazi Party, he wanted Germany to rule Europe. To gain more land and power, on 1 September 1939 German troops invaded Poland.</p>
                 <p> After Hitler refused to stop the invasion, Britain and France declared war on Germany - World War II had begun.</p>
                 <p> During the course of the war, German forces advanced through Europe. By the summer of 1941 they had invaded France, Belgium, Holland, Luxembourg, Denmark, Norway, Greece, Yugoslavia and the USSR(Russia).</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> Millions of Germans were imprisoned and killed because they didn't fit the image of the 'perfect' German.</p>
 
@@ -76,7 +76,7 @@
                 <p> The group most heavily targeted by the Nazis were the Jews. Around six million Jewish people were killed during World War 2 in one of history’s most terrible events - the Holocaust.</p>
                 <p> Racist in his views, Hitler blamed Jewish people for Germany losing World War I and claimed they were dangerous to German people and society.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> Around the same time that Germany fought for power in Europe, Japan wanted to control Asia and the Pacific.</p>
                 <p> In 1937 (before World War II had officially begun) under Emperor Hirohito, Japan attacked China, bringing the two nations into years of conflict.</p>
@@ -84,7 +84,7 @@
                 <p> The US didn't join the war until 1941, when Japan attacked the United States - at their Naval Base at Pearl Harbor in Hawaii. On 8 December 1941 (the very next day), the US declared War on Japan and, in turn, its German allies.</p>
                 <p> Some countries remained 'neutral' in World War 2. Such countries were Spain, Sweden and Switzerland - who chose not to join either side.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> The Germans surrendered on 8 May 1945.</p>
                 <p> In 1944, an Allied army crossed from Britain to free France from Nazi rule. One year later, Allied armies invaded Germany, forcing the Germans to surrender. </p>

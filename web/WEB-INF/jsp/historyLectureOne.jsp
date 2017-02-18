@@ -46,7 +46,7 @@
 
             <div class="videodiv">
                 <h3> A video about the French Revolution</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/X1_2NwmIobU" frameborder="0"></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/X1_2NwmIobU" class="iframe" ></iframe>
             </div>
 
             <div class="lectureTextdiv">
@@ -60,7 +60,7 @@
                 <p> For centuries, the quality of life in Europe had been determined by the status that a person or family held. This status could not be earned, but was determined by the family to which someone was born. If you were born to a poor family, your life would be one of poverty. No matter how hard an individual worked, it was impossible to rise above this fate.</p>
                 <p> 97% of Europe’s people struggled to survive while the remaining 3% lived a life of wealth and comfort.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
 
                 <img src="../resources/images/bastiglia.jpg" alt="A paint about the attack on the Bastille prison" style="width:304px;height:228px;">
@@ -69,13 +69,13 @@
 
                 <p> On 14 July 1789, the people decided to attack the Bastille prison. The Bastille contained weapons, as well as being a symbol of the power of the nobility and the rule of the king, the "Ancien Régime". By the afternoon, the people had broken into the Bastille and released the seven prisoners being held there.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
 
                 <p> On 14 July 1790, a year since the storming of the Bastille, thousands of people gathered in the Champs de Mars to celebrate. The Assembly continued to work on a constitution and make changes. Nobles could no longer pass their titles to their children.</p>
                 <p> During the Reign of Terror, everyone was afraid they would be accused of being a traitor. The penalty for that was being beheaded in the guillotine.</p>
 
-                <p><b>Ok. Let's take a 15 seconds break!</b></p>
+                <p><strong>Ok. Let's take a 15 seconds break!</strong></p>
                 <br>
                 <p> The French Revolution, though it seemed a failure in 1799, and appeared nullified by 1815, had far-reaching results. Feudalism was dead and France was unified. The Revolutionary and Napoleonic Wars tore down the ancient structure of society and government of Europe.</p>
 
